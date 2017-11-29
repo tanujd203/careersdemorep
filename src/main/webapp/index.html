@@ -4,10 +4,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Jubilant Careers</title>
 </head>
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/set1.css">
-<link rel='stylesheet' href='css/triangleimage.css'>
-<link rel='stylesheet' href='css/normalize.min.css'>
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/set1.css" />
+<link rel='stylesheet' href='css/triangleimage.css' />
+<link rel='stylesheet' href='css/normalize.min.css' />
+<link type="text/css" href="css/jplist-custom.css" rel="stylesheet" />
+<link href="css/jplist.core.min.css" rel="stylesheet" type="text/css" />
+<link href="css/jplist.filter-toggle-bundle.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/jplist.pagination-bundle.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/jplist.history-bundle.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/jplist.textbox-filter.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/jplist.jquery-ui-bundle.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/jplist.preloader-control.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/jplist.views-control.min.css" rel="stylesheet"
+	type="text/css" />
+
 <style>
 .dropdown select {
 	background: transparent;
@@ -130,9 +147,240 @@
 						data-colors="white" data-delay="100" data-deleteDelay="2000"></span>
 					<span class="cursor" data-owner="main" data-cursorDisplay="|"></span>
 				</h2>
-				<p>Search for the job that matches your criteria.</p>
-				<div class="search"
-					style="margin-bottom: 0; width: 80%; max-width: 80%;">
+				<p style="margin-top: 0; margin-bottom: 0;">Select the location
+					where you want to work.</p>
+				<div id="worldmap"
+					style="position: relative; width: 75%; height: 500px;"></div>
+			</header>
+			<div class="search"
+				style="width: 100%; background-color: #23b1ec; padding-left: 40px; padding-right: 40px; display: none;">
+
+				<div id="demo" class="jplist">
+					<div class="jplist-panel panel-top" style="">
+						<!-- 						<button type="button" style="background: transparent; color: #ffffff !important; text-shadow: 0px; text-shadow: none; padding: 8px; box-shadow: none; font-size: 12px; border: 1px solid #fff; border-radius: 30px;">
+f							Reset &nbsp;<i class="fa fa-share"></i>
+						</button> -->
+
+						<div class="jplist-drop-down"
+							data-control-type="items-per-page-drop-down"
+							data-control-name="paging" data-control-action="paging"
+							style="background: transparent; width: 120px; color: white; box-shadow: none; text-shadow: none; border-radius: 30px; font-weight: bold; font-size: 14px; padding: 0px; box-shadow: none; font-size: 14px; border: 1px solid #fff; border-radius: 30px;">
+
+							<ul style="color: #000; width: 120px;">
+								<li><span data-number="3" data-default="true"> 3 per
+										page </span></li>
+								<li><span data-number="5"> 5 per page </span></li>
+								<li><span data-number="10"> 10 per page </span></li>
+								<li><span data-number="all"> View All </span></li>
+							</ul>
+						</div>
+
+						<div class="text-filter-box">
+							<i class="fa fa-search  jplist-icon"
+								style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"></i>
+							<!--[if lt IE 10]>
+			            <div class="jplist-label">Filter by Title:</div>
+			            <![endif]-->
+							<input data-path=".title" type="text" value=""
+								placeholder="Filter by Job Title" data-control-type="textbox"
+								data-control-name="title-filter" data-control-action="filter"
+								style="width: 170px; font-size: 14px; padding: 0 5px; text-indent: 0; border-bottom-right-radius: 15px; border-top-right-radius: 15px;" />
+						</div>
+
+						<div class="text-filter-box">
+							<i class="fa fa-search  jplist-icon"
+								style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"></i>
+							<!--[if lt IE 10]>
+			            <div class="jplist-label">Filter by Description:</div>
+			            <![endif]-->
+							<input data-path=".desc" type="text" value=""
+								placeholder="Filter by Job-Description"
+								data-control-type="textbox" data-control-name="desc-filter"
+								data-control-action="filter"
+								style="width: 170px; font-size: 14px; padding: 0 5px; text-indent: 0; border-bottom-right-radius: 15px; border-top-right-radius: 15px;" />
+						</div>
+
+						<div class="jplist-drop-down" data-control-type="filter-drop-down"
+							data-control-name="location-filter" data-control-action="filter"
+							style="background: transparent; width: 200px; color: white; box-shadow: none; text-shadow: none; border-radius: 30px; font-weight: bold; font-size: 14px; padding: 0px; box-shadow: none; font-size: 14px; border: 1px solid #fff; border-radius: 30px;">
+							<ul id="locationUL" style="color: #000; width: 180px;">
+								<li><span data-path="default">Filter by Location</span></li>
+								<li><span data-path=".Banglore">Banglore</span></li>
+								<li><span data-path=".Mumbai">Mumbai</span></li>
+								<li><span data-path=".Nira">Nira</span></li>
+								<li><span data-path=".Noida">Noida</span></li>
+							</ul>
+						</div>
+
+
+						<div class="jplist-drop-down" data-control-type="filter-drop-down"
+							data-control-name="function-filter" data-control-action="filter"
+							style="background: transparent; width: 200px; color: white; box-shadow: none; text-shadow: none; border-radius: 30px; font-weight: bold; font-size: 14px; padding: 0px; box-shadow: none; font-size: 14px; border: 1px solid #fff; border-radius: 30px;">
+							<ul id="functionUL" style="color: #000; width: 300px;">
+								<li><span data-path="default">Filter by Function</span></li>
+								<li><span data-path=".Administration">Administration</span></li>
+								<li><span data-path=".Finance_n_Accounts">Finance &
+										Accounts</span></li>
+								<li><span data-path=".Human_Resources">Human
+										Resources</span></li>
+								<li><span data-path=".Engineering">Engineering</span></li>
+								<li><span data-path=".Legal">Legal</span></li>
+								<li><span data-path=".Supply_Chain">Supply Chain</span></li>
+							</ul>
+						</div>
+
+						<div class="jplist-drop-down" data-control-type="filter-drop-down"
+							data-control-name="business-filter" data-control-action="filter"
+							style="background: transparent; width: 180px; color: white; box-shadow: none; text-shadow: none; border-radius: 30px; font-weight: bold; font-size: 14px; padding: 0px; box-shadow: none; font-size: 14px; border: 1px solid #fff; border-radius: 30px;">
+							<ul id="businessUL" style="color: #000; width: 180px;">
+								<li><span data-path="default">Filter by Business</span></li>
+								<li><span data-path=".Allergy">Allergy</span></li>
+								<li><span data-path=".Corporate">Corporate</span></li>
+								<li><span data-path=".Drug_Discovery">Drug Discovery</span></li>
+								<li><span data-path=".Generics">Generics</span></li>
+							</ul>
+						</div>
+						<br> <br>
+						<!-- pagination results -->
+						<div class="jplist-label" data-type="Page {current} of {pages}"
+							data-control-type="pagination-info" data-control-name="paging"
+							data-control-action="paging"
+							style="background: transparent; font-size: 14px; color: #fff; text-shadow: none; box-shadow: none; border: 1px solid #fff; border-radius: 30px;"></div>
+
+						<!-- pagination -->
+						<div class="jplist-pagination" data-control-type="pagination"
+							data-control-name="paging" data-control-action="paging"></div>
+					</div>
+
+					<!-- data -->
+					<div class="text-shadow" style="padding-top: 20px;">
+						<table class="demo-tbl">
+
+							<!-- one more panel section -->
+							<thead class="jplist-panel">
+
+								<tr data-control-type="sort-buttons-group"
+									data-control-name="header-sort-buttons"
+									data-control-action="sort" data-mode="single"
+									data-datetime-format="{month}/{day}/{year}">
+
+									<th width="10%"><span class="header"
+										style="cursor: pointer">Job Code</span> <span
+										class="sort-btns"
+										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
+											<i class="fa fa-caret-up" data-path=".jobcode"
+											data-type="text" data-order="asc"
+											title="Sort by Job Code Asc"></i> <i class="fa fa-caret-down"
+											data-path=".jobcode" data-type="text" data-order="desc"
+											title="Sort by Job Code Desc"></i>
+									</span></th>
+
+
+									<th><span class="header" style="cursor: pointer">Job
+											Title</span> <span class="sort-btns"
+										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
+											<i class="fa fa-caret-up" data-path=".title" data-type="text"
+											data-order="asc" title="Sort by Title Asc"></i> <i
+											class="fa fa-caret-down" data-path=".title" data-type="text"
+											data-order="desc" title="Sort by Title Desc"></i>
+									</span></th>
+
+									<th><span class="header" style="cursor: pointer">Job
+											Description</span> <span class="sort-btns"
+										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
+											<i class="fa fa-caret-up" data-path=".desc" data-type="text"
+											data-order="asc" title="Sort by Description Asc"></i> <i
+											class="fa fa-caret-down" data-path=".desc" data-type="text"
+											data-order="desc" title="Sort by Description Desc"></i>
+									</span></th>
+
+
+									<th><span class="header" style="cursor: pointer">Location</span>
+										<span class="sort-btns"
+										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
+											<i class="fa fa-caret-up" data-path=".location"
+											data-type="text" data-order="asc"
+											title="Sort by Location Asc"></i> <i class="fa fa-caret-down"
+											data-path=".location" data-type="text" data-order="desc"
+											title="Sort by Location Desc"></i>
+									</span></th>
+
+
+									<th><span class="header" style="cursor: pointer">Function</span>
+										<span class="sort-btns"
+										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
+											<i class="fa fa-caret-up" data-path=".function"
+											data-type="text" data-order="asc"
+											title="Sort by Function Asc"></i> <i class="fa fa-caret-down"
+											data-path=".function" data-type="text" data-order="desc"
+											title="Sort by Function Desc"></i>
+									</span></th>
+
+									<th><span class="header" style="cursor: pointer">Business</span>
+										<span class="sort-btns"
+										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
+											<i class="fa fa-caret-up" data-path=".business"
+											data-type="text" data-order="asc"
+											title="Sort by Business Asc"></i> <i class="fa fa-caret-down"
+											data-path=".business" data-type="text" data-order="desc"
+											title="Sort by Business Desc"></i>
+									</span></th>
+
+
+									<th width="8%"><span class="header">Apply</span></th>
+								</tr>
+							</thead>
+
+							<!-- data container -->
+							<tbody id="jobpostingsBody">
+							</tbody>
+						</table>
+					</div>
+					<!-- end of data -->
+
+					<div class="jplist-no-results text-shadow align-center"
+						style="padding-top: 60px; color: #fff;">
+						<p>
+							<i class="fa fa-warning"></i>&nbsp;&nbsp;No job-postings found.
+						</p>
+					</div>
+
+					<!-- panel -->
+					<div class="jplist-panel panel-bottom">
+
+						<!-- items per page dropdown -->
+						<div class="jplist-drop-down"
+							data-control-type="items-per-page-drop-down"
+							data-control-name="paging" data-control-action="paging"
+							data-control-animate-to-top="true"
+							style="background: transparent; width: 120px; color: white; box-shadow: none; text-shadow: none; border-radius: 30px; font-weight: bold; font-size: 14px; padding: 0px; box-shadow: none; font-size: 14px; border: 1px solid #fff; border-radius: 30px;">
+
+							<ul style="color: #000; width: 120px;">
+								<li><span data-number="3" data-default="true"> 3 per
+										page </span></li>
+								<li><span data-number="5"> 5 per page </span></li>
+								<li><span data-number="10"> 10 per page </span></li>
+								<li><span data-number="all"> View All </span></li>
+							</ul>
+						</div>
+
+						<!-- pagination results -->
+						<div class="jplist-label" data-type="{start} - {end} of {all}"
+							data-control-type="pagination-info" data-control-name="paging"
+							data-control-action="paging"
+							style="background: transparent; font-size: 14px; color: #fff; text-shadow: none; box-shadow: none; border: 1px solid #fff; border-radius: 30px;"></div>
+
+						<!-- pagination -->
+						<div class="jplist-pagination" data-control-type="pagination"
+							data-control-name="paging" data-control-action="paging"
+							data-control-animate-to-top="true"></div>
+
+					</div>
+				</div>
+				<!-- end of demo -->
+
+
+				<!--
 					<div class="dropdown" style="display: inline;">
 						<select style="display: inline;">
 							<option selected="selected">Location</option>
@@ -173,15 +421,15 @@
 							<option>16-20 Years</option>
 							<option>20+ Years</option>
 						</select>
-					</div>
+					</div> 
+
 					<br> <br> <input type="text"
 						placeholder="Enter Job Title, Location, or other relevant keywords"
 						style="background: transparent; font-size: 20px; width: 100%;">
-
-					<a href="javascript:void(0)" class="button big wide scrolly"
-						style="margin-top: 40px;"><i class="fa fa-search"></i>&nbsp;Search</a>
-				</div>
-			</header>
+					-->
+				<a href="javascript:void(0)" class="button big wide scrolly"
+					style="margin-top: 40px;"><i class="fa fa-search"></i>&nbsp;Search</a>
+			</div>
 		</section>
 		<section>
 			<section id="banner">
@@ -449,8 +697,163 @@
 	<script src="js/skel.min.js"></script>
 	<script src="js/util.js"></script>
 	<script src="js/typer.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+	<script src="js/datamaps.world.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.core.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.counter-control.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-dropdown-bundle.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-toggle-bundle.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.history-bundle.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.jquery-ui-bundle.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.pagination-bundle.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-bundle.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.textbox-filter.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.min.js"></script>
 
 	<script>(function($) {skel.breakpoints({xlarge: '(max-width: 1680px)',large: '(max-width: 1280px)',medium: '(max-width: 980px)',small: '(max-width: 736px)',xsmall: '(max-width: 480px)',xxsmall: '(max-width: 360px)'});$(function() {var $window = $(window),$body = $('body'),$header = $('#header'),$banner = $('#banner');$body.addClass('is-loading');$window.on('load', function() {window.setTimeout(function() {$body.removeClass('is-loading');}, 100);});skel.on('+medium -medium', function() {$.prioritize('.important\\28 medium\\29',skel.breakpoint('medium').active);});$('.scrolly').scrolly({offset: function() { return $header.height() - 5; }});if ($banner.length > 0&& $header.hasClass('alt')) {$window.on('resize', function() { $window.trigger('scroll'); });$banner.scrollex({bottom: $header.outerHeight(),terminate: function() { $header.removeClass('alt'); },enter: function() { $header.addClass('alt'); },leave: function() { $header.removeClass('alt'); $header.addClass('reveal'); }});}$('#nav > ul').dropotron({alignment: 'right',hideDelay: 350,baseZIndex: 100000});$('<a href="#navPanel" class="navPanelToggle">Menu</a>').appendTo($header);$( '<div id="navPanel">' +'<nav>' +$('#nav') .navList() +'</nav>' +'<a href="#navPanel" class="close"></a>' +'</div>').appendTo($body).panel({delay: 500,hideOnClick: true,hideOnSwipe: true,resetScroll: true,resetForms: true,target: $body,visibleClass: 'is-navPanel-visible',side: 'right'});if (skel.vars.os == 'wp'&& skel.vars.osVersion < 10)$('#navPanel').css('transition', 'none');if ($banner.length > 0) {if (skel.vars.browser == 'edge'|| skel.vars.browser == 'ie') {var $video = $banner.find('video'),v = $video[0],t, f;var f = function() {var w = v.videoWidth, h = v.videoHeight,pw = $window.width(), ph = $window.height(),nw, nh, x;if (pw > ph) {nw = pw;nh = (nw / w) * h;} else  {nh = ph;nw = (nh / h) * w;}if (nw < pw) {v.style.width = '100vw';v.style.height = 'auto';} else v.style.width = nw + 'px';if (nh < ph) {v.style.height = '100vh';v.style.width = 'auto';} else v.style.height = nh + 'px';v.style.top = v.style.bottom = v.style.left = v.style.right = 'auto';v.style.bottom = '0';v.style.right = '0';};(f)();$window.on('resize load', function() {clearTimeout(t);t = setTimeout(f, 125);});}}$('.tabs').selectorr({titleSelector: 'h3',delay: 250});});})(jQuery);</script>
+
+	<script>
+    var map = new Datamap({element: document.getElementById('worldmap'),
+    	fills: {
+            FILLED: '#042a3a',
+            defaultFill: '#0e5675'
+        },
+        data: {
+            IND: {
+                fillKey: 'FILLED',
+                numberOfOpenings: 2
+            },
+            USA: {
+                fillKey: 'FILLED',
+                numberOfOpenings: 2
+            },
+            CAN: {
+                fillKey: 'FILLED',
+                numberOfOpenings: 2
+            }
+        },  geographyConfig: {
+            popupOnHover: true,
+            highlightOnHover: true,
+            borderColor: '#23b1ec', //#23b1ec
+            borderWidth: 0.1, 
+            highlightFillColor: '#011b26',
+            highlightBorderColor: '#ffffff',
+            highlightBorderWidth: 2,
+            popupTemplate: function(geo, data) {
+                return ['<div class="hoverinfo" style="color: #000; font-size: 11px; font-weight: bold; width: 200px; height: 45px; border-radius: 30px;font-family: inherit;"><p>',
+                    'No. of Openings in ' + geo.properties.name + ': ' + data.numberOfOpenings,
+                    '</p></div>'].join('');
+        }
+        }, done: function(map) {
+        	map.svg.selectAll('.datamaps-subunit').on('click', function(geo) {
+        		//alert(geo.properties.name);
+            	var localData = map.options.data[geo.id];
+                 if ( localData && localData.numberOfOpenings ) {
+                	 
+                	 
+                	 if(geo.properties.name === "India"){
+                		 
+                		 $('#demo').jplist({
+                		      command: 'empty'
+                		   });
+                		 
+                		 $("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
+                		 $("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
+                		 $("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
+                		 $("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16602</td><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Dosage_Forms">Dosage Forms</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16602</td><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Generics">Generics</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
+         	       	    
+                		 $('#demo').jplist({
+         			        itemsBox: '.demo-tbl'
+         					,itemPath: '.tbl-item'
+         					,panelPath: '.jplist-panel'
+         			        //save plugin state
+         					//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
+         					//,storageName: 'jplist-table-sortable-cols'
+         			    });
+
+         			    $('.demo-tbl .header').on('click', function () {
+         			        $(this).next('.sort-btns').find('[data-path]:not(.jplist-selected):first').trigger('click');
+         			    });
+
+                 	} else if(geo.properties.name === "United States of America") {
+                		 
+               		 	$('#demo').jplist({
+           		      	command: 'empty'
+           		   		});
+                 		
+                		 $("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Spokane">Spokane</span></li><li><span data-path=".Yardley">Yardley</span></li>');
+                		 $("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li><li><span data-path=".Pharmacovigilance">Pharmacovigilance</span></li>');
+                		 $("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Allergy">Allergy</span></li><li><span data-path=".Corporate">Corporate</span></li>');
+                		 $("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16450</td><td class="title">Learning & Development Manager</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Yardley">Yardley</td><td class="Pharmacovigilance">Pharmacovigilance</td><td class="Corporate">Corporate</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16533</td><td class="title">Inside Sales Representative</td><td class="desc">An arch is a structure that spans a space and supports a load.</td><td class="Spokane">Spokane</td><td class="Sales_Marketing_n_Business_Development">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Allergy">Allergy</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
+          	       	    
+                		 $('#demo').jplist({
+         			        itemsBox: '.demo-tbl'
+         					,itemPath: '.tbl-item'
+         					,panelPath: '.jplist-panel'
+         			    });
+
+         			    $('.demo-tbl .header').on('click', function () {
+         			        $(this).next('.sort-btns').find('[data-path]:not(.jplist-selected):first').trigger('click');
+         			    });
+         			    
+               	 	} else if(geo.properties.name === "Canada"){
+
+               		 	$('#demo').jplist({
+               		      	command: 'empty'
+               		   		});
+               	 		
+               		 	$("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Montreal">Montreal</span></li>');
+               		 	$("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Quality">Quality</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
+               			$("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".DraxImage">DraxImage</span></li>');
+               			$("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16496</td><td class="title">Compliance Specialist</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Quality">Quality</td><td class="DraxImage">DraxImage</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">Montreal, </td><td class="title">Business Analyst</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="DraxImage">DraxImage</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
+            		 
+            		 	$('#demo').jplist({
+      			        itemsBox: '.demo-tbl'
+      					,itemPath: '.tbl-item'
+      					,panelPath: '.jplist-panel'
+      			    	});
+
+      			    	$('.demo-tbl .header').on('click', function () {
+      			        $(this).next('.sort-btns').find('[data-path]:not(.jplist-selected):first').trigger('click');
+      			   	 	});
+      			    
+                	 }
+                	 
+               		$('.search').fadeIn();
+               		$('html,body').animate({
+                       scrollTop: $('.search').offset().top - 200},
+                       'slow');
+                 	}
+            });
+        }});
+    
+    
+    
+</script>
+
+	<script>
+$('document').ready(function(){
+	    
+		 $('#demo').jplist({
+		        itemsBox: '.demo-tbl'
+				,itemPath: '.tbl-item'
+				,panelPath: '.jplist-panel'
+		    });
+	   
+	});
+	</script>
 
 	<script>	
 	$(".crop").mouseover(function(){
@@ -486,8 +889,6 @@
 	}
     });
 	</script>
-
-
 </body>
 
 </html>
