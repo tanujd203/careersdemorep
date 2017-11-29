@@ -265,7 +265,7 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 									data-datetime-format="{month}/{day}/{year}">
 
 									<th width="10%"><span class="header"
-										style="cursor: pointer">Job Code</span> <span
+										style="cursor: pointer">Job Code</span><!--  <span
 										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".jobcode"
@@ -273,58 +273,63 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 											title="Sort by Job Code Asc"></i> <i class="fa fa-caret-down"
 											data-path=".jobcode" data-type="text" data-order="desc"
 											title="Sort by Job Code Desc"></i>
-									</span></th>
+									</span> --></th>
 
 
-									<th><span class="header" style="cursor: pointer">Job
-											Title</span> <span class="sort-btns"
+									<th width="15%"><span class="header"
+										style="cursor: pointer">Job Title</span><!--  <span
+										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".title" data-type="text"
 											data-order="asc" title="Sort by Title Asc"></i> <i
 											class="fa fa-caret-down" data-path=".title" data-type="text"
 											data-order="desc" title="Sort by Title Desc"></i>
-									</span></th>
+									</span> --></th>
 
-									<th><span class="header" style="cursor: pointer">Job
-											Description</span> <span class="sort-btns"
+									<th width="25%"><span class="header"
+										style="cursor: pointer">Job Description</span><!--  <span
+										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".desc" data-type="text"
 											data-order="asc" title="Sort by Description Asc"></i> <i
 											class="fa fa-caret-down" data-path=".desc" data-type="text"
 											data-order="desc" title="Sort by Description Desc"></i>
-									</span></th>
+									</span> --></th>
 
 
-									<th><span class="header" style="cursor: pointer">Location</span>
-										<span class="sort-btns"
+									<th width="10%"><span class="header"
+										style="cursor: pointer">Location</span><!--  <span
+										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".location"
 											data-type="text" data-order="asc"
 											title="Sort by Location Asc"></i> <i class="fa fa-caret-down"
 											data-path=".location" data-type="text" data-order="desc"
 											title="Sort by Location Desc"></i>
-									</span></th>
+									</span> --></th>
 
 
-									<th><span class="header" style="cursor: pointer">Function</span>
-										<span class="sort-btns"
+									<th width="20%"><span class="header"
+										style="cursor: pointer">Function</span><!--  <span
+										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".function"
 											data-type="text" data-order="asc"
 											title="Sort by Function Asc"></i> <i class="fa fa-caret-down"
 											data-path=".function" data-type="text" data-order="desc"
 											title="Sort by Function Desc"></i>
-									</span></th>
+									</span> --></th>
 
-									<th><span class="header" style="cursor: pointer">Business</span>
-										<span class="sort-btns"
+									<th width="10%"><span class="header"
+										style="cursor: pointer">Business</span><!--  <span
+										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".business"
 											data-type="text" data-order="asc"
 											title="Sort by Business Asc"></i> <i class="fa fa-caret-down"
 											data-path=".business" data-type="text" data-order="desc"
 											title="Sort by Business Desc"></i>
-									</span></th>
+									</span> --></th>
 
 
 									<th width="8%"><span class="header">Apply</span></th>
@@ -765,14 +770,10 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
                 	 
                 	 if(geo.properties.name === "India"){
                 		 
-                		 $('#demo').jplist({
-                		      command: 'empty'
-                		   });
-                		 
                 		 $("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
                 		 $("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
                 		 $("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-                		 $("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16602</td><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Dosage_Forms">Dosage Forms</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16602</td><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Generics">Generics</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
+                		 $("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16602</td><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Dosage_Forms">Dosage Forms</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16654</td><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Generics">Generics</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
          	       	    
                 		 $('#demo').jplist({
          			        itemsBox: '.demo-tbl'
@@ -789,10 +790,6 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 
                  	} else if(geo.properties.name === "United States of America") {
                 		 
-               		 	$('#demo').jplist({
-           		      	command: 'empty'
-           		   		});
-                 		
                 		 $("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Spokane">Spokane</span></li><li><span data-path=".Yardley">Yardley</span></li>');
                 		 $("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li><li><span data-path=".Pharmacovigilance">Pharmacovigilance</span></li>');
                 		 $("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Allergy">Allergy</span></li><li><span data-path=".Corporate">Corporate</span></li>');
@@ -810,15 +807,12 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
          			    
                	 	} else if(geo.properties.name === "Canada"){
 
-               		 	$('#demo').jplist({
-               		      	command: 'empty'
-               		   		});
                	 		
                		 	$("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Montreal">Montreal</span></li>');
                		 	$("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Quality">Quality</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
                			$("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".DraxImage">DraxImage</span></li>');
                			$("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16496</td><td class="title">Compliance Specialist</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Quality">Quality</td><td class="DraxImage">DraxImage</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">Montreal, </td><td class="title">Business Analyst</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="DraxImage">DraxImage</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
-            		 
+ 
             		 	$('#demo').jplist({
       			        itemsBox: '.demo-tbl'
       					,itemPath: '.tbl-item'
