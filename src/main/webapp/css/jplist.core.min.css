@@ -234,7 +234,6 @@
 	display: inline-block;
 	position: absolute;
 	right: 10px;
-	z-index: 1000;
 }
 
 .jplist-drop-down ul {

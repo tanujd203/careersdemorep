@@ -24,6 +24,7 @@
 	type="text/css" />
 <link href="css/jplist.views-control.min.css" rel="stylesheet"
 	type="text/css" />
+<link href="css/iziModal.min.css" rel="stylesheet" type="text/css" />
 
 <style>
 .dropdown select {
@@ -87,7 +88,7 @@
 				<ul>
 					<li class="current" style="white-space: nowrap;"><a
 						href="javascript:void(0)">Home</a></li>
-					<li class="opener"
+					<!-- 					<li class="opener"
 						style="user-select: none; cursor: pointer; white-space: nowrap;"><a
 						href="javascript:void(0)" class="icon fa-angle-down">Dropdown</a>
 						<ul style="user-select: none; display: none; position: absolute;"
@@ -98,27 +99,14 @@
 								href="javascript:void(0)" style="display: block;">Option Two</a></li>
 							<li style="white-space: nowrap;"><a
 								href="javascript:void(0)" style="display: block;">Option
-									Three</a></li>
-							<!-- 							<li class="opener"
-								style="user-select: none; cursor: pointer; white-space: nowrap;"><a
-								href="javascript:void(0)" style="display: block;">Submenu</a>
-								<ul
-									style="user-select: none; display: none; position: absolute;"
-									class="dropotron">
-									<li style="white-space: nowrap;"><a href="javascript:void(0)"
-										style="display: block;">Option One</a></li>
-									<li style="white-space: nowrap;"><a href="javascript:void(0)"
-										style="display: block;">Option Two</a></li>
-									<li style="white-space: nowrap;"><a href="javascript:void(0)"
-										style="display: block;">Option Three</a></li>
-									<li style="white-space: nowrap;"><a href="javascript:void(0)"
-										style="display: block;">Option Four</a></li>
-								</ul></li> -->
-						</ul></li>
-					<li style="white-space: nowrap;"><a href="javascript:void(0)">Link
-							2</a></li>
-					<li style="white-space: nowrap;"><a href="javascript:void(0)">Link
-							3</a></li>
+									Three</a></li> 
+						</ul></li> -->
+					<li style="white-space: nowrap;"><a id="scrollToJobMap2"
+						href="javascript:void(0)">Expore Jobs</a></li>
+					<li style="white-space: nowrap;"><a id="scrollToCoreValues"
+						href="javascript:void(0)">Our Values</a></li>
+					<li style="white-space: nowrap;"><a id="scrollToGetToKnowUs"
+						href="javascript:void(0)">Get To Know Us</a></li>
 				</ul>
 			</nav>
 			<a href="javascript:void(0)" class="navPanelToggle">Menu</a>
@@ -132,7 +120,7 @@
 					<p>Come work with us.</p>
 				</header>
 				<ul class="actions">
-					<li><a href="javascript:void(0)"
+					<li><a id="scrollToJobMap" href="javascript:void(0)"
 						class="button big wide scrolly">View Job Opportunities</a></li>
 				</ul>
 			</div>
@@ -149,7 +137,7 @@
 				</h2>
 				<p style="margin-top: 0; margin-bottom: 0;">Select the location
 					where you want to work.</p>
-				<div id="worldmap"
+				<div id="jobMap"
 					style="position: relative; width: 75%; height: 500px;"></div>
 			</header>
 			<div class="search"
@@ -265,7 +253,7 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 									data-datetime-format="{month}/{day}/{year}">
 
 									<th width="10%"><span class="header"
-										style="cursor: pointer">Job Code</span><!--  <span
+										style="cursor: pointer">Job Code</span> <!--  <span
 										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".jobcode"
@@ -275,9 +263,8 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 											title="Sort by Job Code Desc"></i>
 									</span> --></th>
 
-
 									<th width="15%"><span class="header"
-										style="cursor: pointer">Job Title</span><!--  <span
+										style="cursor: pointer">Job Title</span> <!--  <span
 										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".title" data-type="text"
@@ -287,7 +274,7 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 									</span> --></th>
 
 									<th width="25%"><span class="header"
-										style="cursor: pointer">Job Description</span><!--  <span
+										style="cursor: pointer">Job Description</span> <!--  <span
 										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".desc" data-type="text"
@@ -296,9 +283,8 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 											data-order="desc" title="Sort by Description Desc"></i>
 									</span> --></th>
 
-
 									<th width="10%"><span class="header"
-										style="cursor: pointer">Location</span><!--  <span
+										style="cursor: pointer">Location</span> <!--  <span
 										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".location"
@@ -310,7 +296,7 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 
 
 									<th width="20%"><span class="header"
-										style="cursor: pointer">Function</span><!--  <span
+										style="cursor: pointer">Function</span> <!--  <span
 										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".function"
@@ -321,7 +307,7 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 									</span> --></th>
 
 									<th width="10%"><span class="header"
-										style="cursor: pointer">Business</span><!--  <span
+										style="cursor: pointer">Business</span> <!--  <span
 										class="sort-btns"
 										style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
 											<i class="fa fa-caret-up" data-path=".business"
@@ -694,6 +680,27 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 			style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a>
 	</div>
 
+	<div id="modal" data-iziModal-group="grupo1">
+
+		<div
+			style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; text-align: center;">
+			<input type="text" placeholder="Username"
+				style="border-color: #cccccc; box-shadow: inset 0 0 0 1px #ececec;" />
+			<input type="password" placeholder="Password"
+				style="border-color: #cccccc; box-shadow: inset 0 0 0 1px #ececec; margin-top: 10px; margin-bottom: 25px;" />
+
+			<button
+				style="font-family: inherit; border-radius: 25px; font-size: 15px; font-weight: bold; background: #344b63; box-shadow: inset 0 0 0 0px #23b1ec; color: #ffffff !important; padding: 0 20px;">Log
+				in</button>
+			<!-- 			<button
+				style="font-family: inherit; border-radius: 25px; font-size: 15px; font-weight: bold; background: #2d73bb; box-shadow: inset 0 0 0 0px #23b1ec; color: #ffffff !important; padding: 0 20px; margin-left: 15px;"
+				data-iziModal-close>New User?&nbsp;&nbsp;Register</button> -->
+			<button id="goToRegisterForm"
+				style="font-family: inherit; border-radius: 25px; font-size: 15px; font-weight: bold; background: #2d73bb; box-shadow: inset 0 0 0 0px #23b1ec; color: #ffffff !important; padding: 0 20px; margin-left: 15px;">New
+				User?&nbsp;&nbsp;Register</button>
+		</div>
+	</div>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.dropotron.min.js"></script>
 	<script src="js/jquery.selectorr.min.js"></script>
@@ -702,6 +709,7 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 	<script src="js/skel.min.js"></script>
 	<script src="js/util.js"></script>
 	<script src="js/typer.js"></script>
+	<script src="js/skel.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 	<script
 		src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
@@ -727,161 +735,387 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 	<script
 		src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.min.js"></script>
 
-	<script>(function($) {skel.breakpoints({xlarge: '(max-width: 1680px)',large: '(max-width: 1280px)',medium: '(max-width: 980px)',small: '(max-width: 736px)',xsmall: '(max-width: 480px)',xxsmall: '(max-width: 360px)'});$(function() {var $window = $(window),$body = $('body'),$header = $('#header'),$banner = $('#banner');$body.addClass('is-loading');$window.on('load', function() {window.setTimeout(function() {$body.removeClass('is-loading');}, 100);});skel.on('+medium -medium', function() {$.prioritize('.important\\28 medium\\29',skel.breakpoint('medium').active);});$('.scrolly').scrolly({offset: function() { return $header.height() - 5; }});if ($banner.length > 0&& $header.hasClass('alt')) {$window.on('resize', function() { $window.trigger('scroll'); });$banner.scrollex({bottom: $header.outerHeight(),terminate: function() { $header.removeClass('alt'); },enter: function() { $header.addClass('alt'); },leave: function() { $header.removeClass('alt'); $header.addClass('reveal'); }});}$('#nav > ul').dropotron({alignment: 'right',hideDelay: 350,baseZIndex: 100000});$('<a href="#navPanel" class="navPanelToggle">Menu</a>').appendTo($header);$( '<div id="navPanel">' +'<nav>' +$('#nav') .navList() +'</nav>' +'<a href="#navPanel" class="close"></a>' +'</div>').appendTo($body).panel({delay: 500,hideOnClick: true,hideOnSwipe: true,resetScroll: true,resetForms: true,target: $body,visibleClass: 'is-navPanel-visible',side: 'right'});if (skel.vars.os == 'wp'&& skel.vars.osVersion < 10)$('#navPanel').css('transition', 'none');if ($banner.length > 0) {if (skel.vars.browser == 'edge'|| skel.vars.browser == 'ie') {var $video = $banner.find('video'),v = $video[0],t, f;var f = function() {var w = v.videoWidth, h = v.videoHeight,pw = $window.width(), ph = $window.height(),nw, nh, x;if (pw > ph) {nw = pw;nh = (nw / w) * h;} else  {nh = ph;nw = (nh / h) * w;}if (nw < pw) {v.style.width = '100vw';v.style.height = 'auto';} else v.style.width = nw + 'px';if (nh < ph) {v.style.height = '100vh';v.style.width = 'auto';} else v.style.height = nh + 'px';v.style.top = v.style.bottom = v.style.left = v.style.right = 'auto';v.style.bottom = '0';v.style.right = '0';};(f)();$window.on('resize load', function() {clearTimeout(t);t = setTimeout(f, 125);});}}$('.tabs').selectorr({titleSelector: 'h3',delay: 250});});})(jQuery);</script>
+	<script src="js/iziModal.min.js"></script>
+
 
 	<script>
-    var map = new Datamap({element: document.getElementById('worldmap'),
-    	fills: {
-            FILLED: '#042a3a',
-            defaultFill: '#0e5675'
-        },
-        data: {
-            IND: {
-                fillKey: 'FILLED',
-                numberOfOpenings: 2
-            },
-            USA: {
-                fillKey: 'FILLED',
-                numberOfOpenings: 2
-            },
-            CAN: {
-                fillKey: 'FILLED',
-                numberOfOpenings: 2
-            }
-        },  geographyConfig: {
-            popupOnHover: true,
-            highlightOnHover: true,
-            borderColor: '#23b1ec', //#23b1ec
-            borderWidth: 0.1, 
-            highlightFillColor: '#011b26',
-            highlightBorderColor: '#ffffff',
-            highlightBorderWidth: 2,
-            popupTemplate: function(geo, data) {
-                return ['<div class="hoverinfo" style="color: #000; font-size: 11px; font-weight: bold; width: 200px; height: 45px; border-radius: 30px;font-family: inherit;"><p>',
-                    'No. of Openings in ' + geo.properties.name + ': ' + data.numberOfOpenings,
-                    '</p></div>'].join('');
-        }
-        }, done: function(map) {
-        	map.svg.selectAll('.datamaps-subunit').on('click', function(geo) {
-        		//alert(geo.properties.name);
-            	var localData = map.options.data[geo.id];
-                 if ( localData && localData.numberOfOpenings ) {
-                	 
-                	 
-                	 if(geo.properties.name === "India"){
-                		 
-                		 $("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
-                		 $("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-                		 $("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-                		 $("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16602</td><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Dosage_Forms">Dosage Forms</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16654</td><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Generics">Generics</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
-         	       	    
-                		 $('#demo').jplist({
-         			        itemsBox: '.demo-tbl'
-         					,itemPath: '.tbl-item'
-         					,panelPath: '.jplist-panel'
-         			        //save plugin state
-         					//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
-         					//,storageName: 'jplist-table-sortable-cols'
-         			    });
+		$('document')
+				.ready(
+						function() {
 
-         			    $('.demo-tbl .header').on('click', function () {
-         			        $(this).next('.sort-btns').find('[data-path]:not(.jplist-selected):first').trigger('click');
-         			    });
+							var map = new Datamap(
+									{
+										element : document
+												.getElementById('jobMap'),
+										fills : {
+											FILLED : '#042a3a', //#042a3a
+											defaultFill : '#0e5675' //#0e5675
+										},
+										data : {
+											IND : {
+												fillKey : 'FILLED',
+												numberOfOpenings : 2
+											},
+											USA : {
+												fillKey : 'FILLED',
+												numberOfOpenings : 2
+											},
+											CAN : {
+												fillKey : 'FILLED',
+												numberOfOpenings : 2
+											}
+										},
+										geographyConfig : {
+											popupOnHover : true,
+											highlightOnHover : true,
+											borderColor : '#23b1ec', //#23b1ec
+											borderWidth : 0.5,
+											highlightFillColor : '#011b26', //#011b26
+											highlightBorderColor : '#ffffff',
+											highlightBorderWidth : 2,
+											popupTemplate : function(geo, data) {
+												return [
+														'<div class="hoverinfo" style="color: #000; font-size: 11px; font-weight: bold; padding-left:10px; padding-right: 10px; height: 30px; border-radius: 30px; font-family: inherit;"><p>',
+														'No. of Openings in '
+																+ geo.properties.name
+																+ ': '
+																+ data.numberOfOpenings,
+														'</p></div>' ].join('');
+											}
+										},
+										done : function(map) {
+											map.svg
+													.selectAll(
+															'.datamaps-subunit')
+													.on(
+															'click',
+															function(geo) {
+																//alert(geo.properties.name);
+																var localData = map.options.data[geo.id];
+																if (localData
+																		&& localData.numberOfOpenings) {
 
-                 	} else if(geo.properties.name === "United States of America") {
-                		 
-                		 $("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Spokane">Spokane</span></li><li><span data-path=".Yardley">Yardley</span></li>');
-                		 $("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li><li><span data-path=".Pharmacovigilance">Pharmacovigilance</span></li>');
-                		 $("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Allergy">Allergy</span></li><li><span data-path=".Corporate">Corporate</span></li>');
-                		 $("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16450</td><td class="title">Learning & Development Manager</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Yardley">Yardley</td><td class="Pharmacovigilance">Pharmacovigilance</td><td class="Corporate">Corporate</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16533</td><td class="title">Inside Sales Representative</td><td class="desc">An arch is a structure that spans a space and supports a load.</td><td class="Spokane">Spokane</td><td class="Sales_Marketing_n_Business_Development">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Allergy">Allergy</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
-          	       	    
-                		 $('#demo').jplist({
-         			        itemsBox: '.demo-tbl'
-         					,itemPath: '.tbl-item'
-         					,panelPath: '.jplist-panel'
-         			    });
+																	if (geo.properties.name === "India") {
 
-         			    $('.demo-tbl .header').on('click', function () {
-         			        $(this).next('.sort-btns').find('[data-path]:not(.jplist-selected):first').trigger('click');
-         			    });
-         			    
-               	 	} else if(geo.properties.name === "Canada"){
+																		$(
+																				"#locationUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
+																		$(
+																				"#functionUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
+																		$(
+																				"#businessUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
+																		$(
+																				"#jobpostingsBody")
+																				.html(
+																						'<tr class="tbl-item"><td class="jobcode">16602</td><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Dosage_Forms">Dosage Forms</td><td><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16654</td><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Generics">Generics</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
 
-               	 		
-               		 	$("#locationUL").html('<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Montreal">Montreal</span></li>');
-               		 	$("#functionUL").html('<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Quality">Quality</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-               			$("#businessUL").html('<li><span data-path="default">Filter by Business</span></li><li><span data-path=".DraxImage">DraxImage</span></li>');
-               			$("#jobpostingsBody").html('<tr class="tbl-item"><td class="jobcode">16496</td><td class="title">Compliance Specialist</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Quality">Quality</td><td class="DraxImage">DraxImage</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">Montreal, </td><td class="title">Business Analyst</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="DraxImage">DraxImage</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
- 
-            		 	$('#demo').jplist({
-      			        itemsBox: '.demo-tbl'
-      					,itemPath: '.tbl-item'
-      					,panelPath: '.jplist-panel'
-      			    	});
+																		$(
+																				'#demo')
+																				.jplist(
+																						{
+																							itemsBox : '.demo-tbl',
+																							itemPath : '.tbl-item',
+																							panelPath : '.jplist-panel'
+																						//save plugin state
+																						//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
+																						//,storageName: 'jplist-table-sortable-cols'
+																						});
 
-      			    	$('.demo-tbl .header').on('click', function () {
-      			        $(this).next('.sort-btns').find('[data-path]:not(.jplist-selected):first').trigger('click');
-      			   	 	});
-      			    
-                	 }
-                	 
-               		$('.search').fadeIn();
-               		$('html,body').animate({
-                       scrollTop: $('.search').offset().top - 200},
-                       'slow');
-                 	}
-            });
-        }});
-    
-    
-    
-</script>
+																		$(
+																				'.demo-tbl .header')
+																				.on(
+																						'click',
+																						function() {
+																							$(
+																									this)
+																									.next(
+																											'.sort-btns')
+																									.find(
+																											'[data-path]:not(.jplist-selected):first')
+																									.trigger(
+																											'click');
+																						});
 
-	<script>
-$('document').ready(function(){
-	    
-		 $('#demo').jplist({
-		        itemsBox: '.demo-tbl'
-				,itemPath: '.tbl-item'
-				,panelPath: '.jplist-panel'
-		    });
-	   
-	});
+																	} else if (geo.properties.name === "United States of America") {
+
+																		$(
+																				"#locationUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Spokane">Spokane</span></li><li><span data-path=".Yardley">Yardley</span></li>');
+																		$(
+																				"#functionUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li><li><span data-path=".Pharmacovigilance">Pharmacovigilance</span></li>');
+																		$(
+																				"#businessUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Allergy">Allergy</span></li><li><span data-path=".Corporate">Corporate</span></li>');
+																		$(
+																				"#jobpostingsBody")
+																				.html(
+																						'<tr class="tbl-item"><td class="jobcode">16450</td><td class="title">Learning & Development Manager</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Yardley">Yardley</td><td class="Pharmacovigilance">Pharmacovigilance</td><td class="Corporate">Corporate</td><td><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16533</td><td class="title">Inside Sales Representative</td><td class="desc">An arch is a structure that spans a space and supports a load.</td><td class="Spokane">Spokane</td><td class="Sales_Marketing_n_Business_Development">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Allergy">Allergy</td><td><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
+
+																		$(
+																				'#demo')
+																				.jplist(
+																						{
+																							itemsBox : '.demo-tbl',
+																							itemPath : '.tbl-item',
+																							panelPath : '.jplist-panel'
+																						});
+
+																		$(
+																				'.demo-tbl .header')
+																				.on(
+																						'click',
+																						function() {
+																							$(
+																									this)
+																									.next(
+																											'.sort-btns')
+																									.find(
+																											'[data-path]:not(.jplist-selected):first')
+																									.trigger(
+																											'click');
+																						});
+
+																	} else if (geo.properties.name === "Canada") {
+
+																		$(
+																				"#locationUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Montreal">Montreal</span></li>');
+																		$(
+																				"#functionUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Quality">Quality</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
+																		$(
+																				"#businessUL")
+																				.html(
+																						'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".DraxImage">DraxImage</span></li>');
+																		$(
+																				"#jobpostingsBody")
+																				.html(
+																						'<tr class="tbl-item"><td class="jobcode">16496</td><td class="title">Compliance Specialist</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Quality">Quality</td><td class="DraxImage">DraxImage</td><td><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">Montreal, </td><td class="title">Business Analyst</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="DraxImage">DraxImage</td><td><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
+
+																		$(
+																				'#demo')
+																				.jplist(
+																						{
+																							itemsBox : '.demo-tbl',
+																							itemPath : '.tbl-item',
+																							panelPath : '.jplist-panel'
+																						});
+
+																		$(
+																				'.demo-tbl .header')
+																				.on(
+																						'click',
+																						function() {
+																							$(
+																									this)
+																									.next(
+																											'.sort-btns')
+																									.find(
+																											'[data-path]:not(.jplist-selected):first')
+																									.trigger(
+																											'click');
+																						});
+
+																	}
+
+																	$('.search')
+																			.fadeIn();
+																	$(
+																			'html,body')
+																			.animate(
+																					{
+																						scrollTop : $(
+																								'.search')
+																								.offset().top - 200
+																					},
+																					'slow');
+																}
+															});
+										}
+									});
+
+							$('#demo').jplist({
+								itemsBox : '.demo-tbl',
+								itemPath : '.tbl-item',
+								panelPath : '.jplist-panel'
+							});
+
+							$('#scrollToJobMap').click(function() {
+
+								$('html,body').animate({
+									scrollTop : $('#jobMap').offset().top - 200
+								}, 'slow');
+
+							})
+
+							$('#scrollToJobMap2').click(function() {
+
+								$('html,body').animate({
+									scrollTop : $('#jobMap').offset().top - 200
+								}, 'slow');
+
+							})
+
+							$('#scrollToCoreValues').click(function() {
+
+								$('html,body').animate({
+									scrollTop : $('#two').offset().top - 50
+								}, 'slow');
+
+							})
+
+							$('#scrollToGetToKnowUs').click(function() {
+
+								$('html,body').animate({
+									scrollTop : $('#three').offset().top - 50
+								}, 'slow');
+
+							})
+
+							$("#modal")
+									.iziModal(
+											{
+												title : 'Login',
+												subtitle : 'Please login to continue.',
+												headerColor : '#344b63',
+												background : null,
+												theme : '', // light
+												icon : null,
+												iconText : null,
+												iconColor : '',
+												rtl : false,
+												width : 600,
+												top : null,
+												bottom : null,
+												borderBottom : true,
+												padding : 0,
+												radius : 3,
+												zindex : 999,
+												iframe : false,
+												iframeHeight : 400,
+												iframeURL : null,
+												focusInput : true,
+												group : '',
+												loop : false,
+												navigateCaption : true,
+												navigateArrows : true, // Boolean, 'closeToModal', 'closeScreenEdge'
+												history : false,
+												restoreDefaultContent : false,
+												autoOpen : 0, // Boolean, Number
+												bodyOverflow : false,
+												fullscreen : false,
+												openFullscreen : false,
+												closeOnEscape : true,
+												closeButton : true,
+												appendTo : 'body', // or false
+												appendToOverlay : 'body', // or false
+												overlay : true,
+												overlayClose : true,
+												overlayColor : 'rgba(0, 0, 0, 0.4)',
+												timeout : false,
+												timeoutProgressbar : false,
+												pauseOnHover : false,
+												timeoutProgressbarColor : 'rgba(255,255,255,0.5)',
+												transitionIn : 'comingIn',
+												transitionOut : 'comingOut',
+												transitionInOverlay : 'fadeIn',
+												transitionOutOverlay : 'fadeOut',
+												onFullscreen : function() {
+												},
+												onResize : function() {
+												},
+												onOpening : function() {
+												},
+												onOpened : function() {
+												},
+												onClosing : function() {
+												},
+												onClosed : function() {
+												},
+												afterRender : function() {
+												}
+											});
+
+							$(document).on('click', '.modalTrigger',
+									function(event) {
+										event.preventDefault();
+										$('#modal').iziModal('open');
+									});
+
+							$("#goToRegisterForm").click(function() {
+								
+								//As an HTTP redirect (back button will not work )
+								//window.location.replace("http://www.google.com");
+
+								//like if you click on a link (it will be saved in the session history, 
+								//so the back button will work as expected)
+								window.location.href = "registration.html";
+
+							});
+
+						});
 	</script>
 
-	<script>	
-	$(".crop").mouseover(function(){
-		switch (this.id) {
-	    case '1':
-	        $('#q_name').text('Will Mccarron');
-	        $('#q_val').text('Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives.');
-	        break;
-	    case '2':
-	        $('#q_name').text('Austin Crooks');
-	        $('#q_val').text("The internal work environment at Jubilant Life Sciences far exceeds any corporation for which I've worked.  WHA stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family.");
-	        break;
-	    case '3':
-	        $('#q_name').text('Cody Leblanc');
-	        $('#q_val').text("Jubilant truly values their employees, many people have been at Jubilant for 10+ years, myself included, Jubilant experiences very little employee turnover.  The company also tries to promote from within the corporation before seeking outside candidates.  I am a prime example of this principle, I started my career at WHA as a temporary staff accountant and I've grown as Jubilant has grown, I'm now the financial reporting manager. ");
-	        break;
-	    case '4':
-	        $('#q_name').text('Liberty Dewolfe');
-	        $('#q_val').text("Jubilant is a great place to work! Here is a list of reasons why: Family friendly, flexible work schedules, suggestions for changes are received openly, easy to implement changes, great co-workers, friendly environment, lots of training opportunities, senior staff seems to really care that employees are happy and motivated, plenty of celebrations and lots of reasons to celebrate, company has strong community presence, company has a good reputation in the community so I am proud to tell people I work here, promotes a healthy work environment and generous benefits (health, dental, vision, vacation).");
-	        break;
-	    case '5':
-	        $('#q_name').text('Samuel Bengtson');
-	        $('#q_val').text('Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives.');
-	        break;
-	    case '6':
-	        $('#q_name').text('Roland Sams');
-	        $('#q_val').text("The internal work environment at Jubilant Life Sciences far exceeds any corporation for which I've worked.  WHA stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family.");
-	        break;
-	    case '7':
-	        $('#q_name').text('Kandace Stilts'); 
-	        $('#q_val').text("Jubilant is a great place to work! Here is a list of reasons why: Family friendly, flexible work schedules, suggestions for changes are received openly, easy to implement changes, great co-workers, friendly environment, lots of training opportunities, senior staff seems to really care that employees are happy and motivated, plenty of celebrations and lots of reasons to celebrate, company has strong community presence, company has a good reputation in the community so I am proud to tell people I work here, promotes a healthy work environment and generous benefits (health, dental, vision, vacation).");
-	        break;
-	}
-    });
+	<script>
+		$(".crop")
+				.mouseover(
+						function() {
+							switch (this.id) {
+							case '1':
+								$('#q_name').text('Will Mccarron');
+								$('#q_val')
+										.text(
+												'Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives.');
+								break;
+							case '2':
+								$('#q_name').text('Austin Crooks');
+								$('#q_val')
+										.text(
+												"The internal work environment at Jubilant Life Sciences far exceeds any corporation for which I've worked.  WHA stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family.");
+								break;
+							case '3':
+								$('#q_name').text('Cody Leblanc');
+								$('#q_val')
+										.text(
+												"Jubilant truly values their employees, many people have been at Jubilant for 10+ years, myself included, Jubilant experiences very little employee turnover.  The company also tries to promote from within the corporation before seeking outside candidates.  I am a prime example of this principle, I started my career at WHA as a temporary staff accountant and I've grown as Jubilant has grown, I'm now the financial reporting manager. ");
+								break;
+							case '4':
+								$('#q_name').text('Liberty Dewolfe');
+								$('#q_val')
+										.text(
+												"Jubilant is a great place to work! Here is a list of reasons why: Family friendly, flexible work schedules, suggestions for changes are received openly, easy to implement changes, great co-workers, friendly environment, lots of training opportunities, senior staff seems to really care that employees are happy and motivated, plenty of celebrations and lots of reasons to celebrate, company has strong community presence, company has a good reputation in the community so I am proud to tell people I work here, promotes a healthy work environment and generous benefits (health, dental, vision, vacation).");
+								break;
+							case '5':
+								$('#q_name').text('Samuel Bengtson');
+								$('#q_val')
+										.text(
+												'Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives.');
+								break;
+							case '6':
+								$('#q_name').text('Roland Sams');
+								$('#q_val')
+										.text(
+												"The internal work environment at Jubilant Life Sciences far exceeds any corporation for which I've worked.  WHA stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family.");
+								break;
+							case '7':
+								$('#q_name').text('Kandace Stilts');
+								$('#q_val')
+										.text(
+												"Jubilant is a great place to work! Here is a list of reasons why: Family friendly, flexible work schedules, suggestions for changes are received openly, easy to implement changes, great co-workers, friendly environment, lots of training opportunities, senior staff seems to really care that employees are happy and motivated, plenty of celebrations and lots of reasons to celebrate, company has strong community presence, company has a good reputation in the community so I am proud to tell people I work here, promotes a healthy work environment and generous benefits (health, dental, vision, vacation).");
+								break;
+							}
+						});
 	</script>
 </body>
 
