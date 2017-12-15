@@ -230,7 +230,7 @@
 
 .jplist-drop-down .jplist-dd-panel:after {
 	content: '\25BC';
-	color: #FFF;
+	color: #000000;
 	display: inline-block;
 	position: absolute;
 	right: 10px;
@@ -271,11 +271,11 @@
 }
 
 .jplist-drop-down:hover .jplist-dd-panel {
-	color: #ffffff
+	color: #000000
 }
 
 .jplist-drop-down:hover .jplist-dd-panel:after {
-	color: #ffffff
+	color: #000000
 }
 
 .jplist-select {
