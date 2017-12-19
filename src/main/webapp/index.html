@@ -214,10 +214,10 @@
 								<div data-p="141.75" style="display: none;">
 									<img data-u="image" src="images/slide3.jpg" alt=""> <span
 										class="caption1" data-u="caption" data-t="0"
-										style="left: -88%; z-index: 0; background: #23b1ec;">&nbsp;&nbsp;Discover
+										style="left: -88%; z-index: 0; background: #23b1ec; font-weight: 500;">&nbsp;&nbsp;Discover
 										and do what you love.&nbsp;&nbsp;</span> <span class="caption2"
 										data-u="caption" data-t="0"
-										style="left: -88%; z-index: 0; background: #80bb2d;">
+										style="left: -88%; z-index: 0; background: #80bb2d; font-weight: 500;">
 										&nbsp;&nbsp;Come work with us.&nbsp;&nbsp; <br>
 									</span>
 									<ul class="actions caption3" data-u="caption" data-t="0"
@@ -236,7 +236,7 @@
 										style="left: -80%; top: 12%; z-index: 0; background: #fff; font-size: 14px; color: #000;">&nbsp;&nbsp;&nbsp;Dr.
 										Raju Sunil Mistry, Chief Human Resources Officer&nbsp;&nbsp;</h3>
 									<span class="caption2" data-u="caption" data-t="0.7"
-										style="top: 22%; left: -82%; z-index: 0; font-size: 14px; background: #23b1ec;">
+										style="top: 22%; left: -82%; z-index: 0; font-size: 14px; font-weight: 400; background: #23b1ec;">
 										&nbsp;&nbsp;&nbsp;" Jubilant Life Sciences is by far the best
 										place to work for numerous reasons, &nbsp;<br>&nbsp;
 										first and foremost, the culture of the organization thrives on
@@ -252,7 +252,7 @@
 										Steve Hutchins, President - Drug Discovery
 										Solutions&nbsp;&nbsp;</h3>
 									<span class="caption2" data-u="caption" data-t="0"
-										style="top: 66%; left: -82%; z-index: 0; font-size: 14px; background: #80bb2d;">
+										style="top: 66%; left: -82%; z-index: 0; font-size: 14px; font-weight: 400; background: #80bb2d;">
 										&nbsp;&nbsp;&nbsp;" The internal work environment at Jubilant
 										Life Sciences far exceeds any &nbsp;<br>&nbsp; other
 										corporation. Jubilant stresses the importance of family, if an
@@ -1036,9 +1036,12 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 													.style("stroke-width", 1);
 											/* .style("stroke-dasharray", '5, 1') */
 
-											layer.append("text").attr("x", 710)
+											layer
+													.append("text")
+													.attr("x", 710)
 													.attr("y", 350)
-													.style("font-size", '10px')
+													.style("font-size", '12px')
+													.style("font-weight", '500')
 													.style("font-family",
 															"inherit").style(
 															"fill", "#fff")
@@ -1053,9 +1056,12 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 													.style("stroke-width", 1);
 											/* .style("stroke-dasharray", '5, 1') */
 
-											layer.append("text").attr("x", 210)
+											layer
+													.append("text")
+													.attr("x", 210)
 													.attr("y", 325)
-													.style("font-size", '10px')
+													.style("font-size", '12px')
+													.style("font-weight", '500')
 													.style("font-family",
 															"inherit").style(
 															"fill", "#fff")
@@ -1070,9 +1076,12 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 													.style("stroke-width", 1);
 											/* .style("stroke-dasharray", '5, 1') */
 
-											layer.append("text").attr("x", 175)
+											layer
+													.append("text")
+													.attr("x", 175)
 													.attr("y", 350)
-													.style("font-size", '10px')
+													.style("font-size", '12px')
+													.style("font-weight", '500')
 													.style("font-family",
 															"inherit").style(
 															"fill", "#fff")
@@ -1378,10 +1387,10 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 
 							$('.responsive').slick({
 								dots : true,
-								infinite : false,
+								infinite : true,
 								speed : 800,
-								autoplay : false,
-								autoplaySpeed : 5000,
+								autoplay : true,
+								autoplaySpeed : 2000,
 								slidesToShow : 3,
 								slidesToScroll : 1,
 								variableWidth : true
@@ -1471,56 +1480,6 @@ f							Reset &nbsp;<i class="fa fa-share"></i>
 						});
 	</script>
 
-	<script>
-		$(".crop")
-				.mouseover(
-						function() {
-							switch (this.id) {
-							case '1':
-								$('#q_name').text('Will Mccarron');
-								$('#q_val')
-										.text(
-												'Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives.');
-								break;
-							case '2':
-								$('#q_name').text('Austin Crooks');
-								$('#q_val')
-										.text(
-												"The internal work environment at Jubilant Life Sciences far exceeds any corporation for which I've worked.  Jubilant stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family.");
-								break;
-							case '3':
-								$('#q_name').text('Cody Leblanc');
-								$('#q_val')
-										.text(
-												"Jubilant truly values their employees, many people have been at Jubilant for 10+ years, myself included, Jubilant experiences very little employee turnover.  The company also tries to promote from within the corporation before seeking outside candidates.  I am a prime example of this principle, I started my career at Jubilant as a temporary staff accountant and I've grown as Jubilant has grown, I'm now the financial reporting manager. ");
-								break;
-							case '4':
-								$('#q_name').text('Liberty Dewolfe');
-								$('#q_val')
-										.text(
-												"Jubilant is a great place to work! Here is a list of reasons why: Family friendly, flexible work schedules, suggestions for changes are received openly, easy to implement changes, great co-workers, friendly environment, lots of training opportunities, senior staff seems to really care that employees are happy and motivated, plenty of celebrations and lots of reasons to celebrate, company has strong community presence, company has a good reputation in the community so I am proud to tell people I work here, promotes a healthy work environment and generous benefits (health, dental, vision, vacation).");
-								break;
-							case '5':
-								$('#q_name').text('Samuel Bengtson');
-								$('#q_val')
-										.text(
-												'Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives.');
-								break;
-							case '6':
-								$('#q_name').text('Roland Sams');
-								$('#q_val')
-										.text(
-												"The internal work environment at Jubilant Life Sciences far exceeds any corporation for which I've worked.  Jubilant stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family.");
-								break;
-							case '7':
-								$('#q_name').text('Kandace Stilts');
-								$('#q_val')
-										.text(
-												"Jubilant is a great place to work! Here is a list of reasons why: Family friendly, flexible work schedules, suggestions for changes are received openly, easy to implement changes, great co-workers, friendly environment, lots of training opportunities, senior staff seems to really care that employees are happy and motivated, plenty of celebrations and lots of reasons to celebrate, company has strong community presence, company has a good reputation in the community so I am proud to tell people I work here, promotes a healthy work environment and generous benefits (health, dental, vision, vacation).");
-								break;
-							}
-						});
-	</script>
 </body>
 
 </html>
