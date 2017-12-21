@@ -1,6 +1,10 @@
-/*custom font*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import
+	url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css)
+	;
 
+@import
+	url("https://fonts.googleapis.com/css?family=Lato:300,400,700,300i,400i,700i")
+	;
 /*basic reset*/
 * {
 	margin: 0;
@@ -13,7 +17,7 @@ html {
 }
 
 body {
-	font-family: montserrat, arial, verdana;
+	font-family: "Lato", Arial, Helvetica, sans-serif;
 	background: transparent;
 }
 
@@ -38,8 +42,8 @@ body {
 }
 
 /*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-	display: none;
+#msform fieldset:not(:first-of-type){
+	display:none;
 }
 
 /*inputs*/
@@ -51,7 +55,7 @@ body {
 	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
-	font-family: montserrat;
+	font-family: "Lato", Arial, Helvetica, sans-serif;
 	color: #2C3E50;
 	font-size: 13px;
 }
@@ -123,11 +127,10 @@ body {
 #progressbar {
 	margin-bottom: 30px;
 	overflow: hidden;
-	/*CSS counters to number the steps*/
-	counter-reset: step;
 }
 
-#progressbar li {
+#progressbar .li1, #progressbar .li2, #progressbar .li3, #progressbar .li4,
+	#progressbar .li5, #progressbar .li6 {
 	list-style-type: none;
 	color: white;
 	text-transform: uppercase;
@@ -138,40 +141,144 @@ body {
 	letter-spacing: 1px;
 }
 
-#progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 24px;
-	height: 24px;
-	line-height: 26px;
-	display: block;
-	font-size: 12px;
+#progressbar .li1:before {
+	content: '\f040';
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	width: 45px;
+	height: 45px;
+    line-height: 40px;
+    display: block;
+    font-size: 18px;
 	color: #333;
 	background: white;
 	border-radius: 25px;
 	margin: 0 auto 10px auto;
+	border: 2px solid #fff;
+}
+
+#progressbar .li2:before {
+	content: '\f15b';
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	width: 45px;
+	height: 45px;
+    line-height: 40px;
+    display: block;
+    font-size: 18px;
+	color: #333;
+	background: white;
+	border-radius: 25px;
+	margin: 0 auto 10px auto;
+	border: 2px solid #fff;
+}
+
+#progressbar .li3:before {
+	content: '\f007';
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	width: 45px;
+	height: 45px;
+    line-height: 40px;
+    display: block;
+    font-size: 18px;
+	color: #333;
+	background: white;
+	border-radius: 25px;
+	margin: 0 auto 10px auto;
+	border: 2px solid #fff;
+}
+
+#progressbar .li4:before {
+	content: '\f19d';
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	width: 45px;
+	height: 45px;
+    line-height: 40px;
+    display: block;
+    font-size: 18px;
+	color: #333;
+	background: white;
+	border-radius: 25px;
+	margin: 0 auto 10px auto;
+	border: 2px solid #fff;
+}
+
+#progressbar .li5:before {
+	content: '\f0f2';
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	width: 45px;
+	height: 45px;
+    line-height: 40px;
+    display: block;
+    font-size: 18px;
+	color: #333;
+	background: white;
+	border-radius: 25px;
+	margin: 0 auto 10px auto;
+	border: 2px solid #fff;
+}
+
+#progressbar .li6:before {
+	content: '\f15b';
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	width: 45px;
+	height: 45px;
+    line-height: 40px;
+    display: block;
+    font-size: 18px;
+	color: #333;
+	background: white;
+	border-radius: 25px;
+	margin: 0 auto 10px auto;
+	border: 2px solid #fff;
 }
 
 /*progressbar connectors*/
-#progressbar li:after {
+#progressbar .li1:after, #progressbar .li2:after, #progressbar .li3:after,
+	#progressbar .li4:after, #progressbar .li5:after, #progressbar .li6:after
+	{
 	content: '';
 	width: 100%;
 	height: 2px;
 	background: white;
 	position: absolute;
 	left: -50%;
-	top: 9px;
+	top: 19px;
 	z-index: -1; /*put it behind the numbers*/
 }
 
-#progressbar li:first-child:after {
+#progressbar .li1:first-child:after, #progressbar .li2:first-child:after,
+	#progressbar .li3:first-child:after, #progressbar .li4:first-child:after,
+	#progressbar .li5:first-child:after, #progressbar .li6:first-child:after
+	{
 	/*connector not needed before the first step*/
 	content: none;
 }
 
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
-#progressbar li.active:before, #progressbar li.active:after {
+#progressbar .li1.active:before, #progressbar .li2.active:after,
+	#progressbar .li2.active:before, #progressbar .li2.active:after,
+	#progressbar .li3.active:before, #progressbar .li3.active:after,
+	#progressbar .li4.active:before, #progressbar .li4.active:after,
+	#progressbar .li5.active:before, #progressbar .li5.active:after,
+	#progressbar .li6.active:before, #progressbar .li6.active:after {
 	background: #3fb72a;
 	color: white;
 }
