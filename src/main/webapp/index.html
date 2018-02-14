@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
 
@@ -26,6 +26,7 @@
     type="text/css" />
     <link href="css/jplist.views-control.min.css" rel="stylesheet"
     type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="scroll-area" data-spy="scroll" data-offset="0">
 
@@ -41,7 +42,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-              <img alt="Jubilant" src="images/jubl_logo.png">
+              <img alt="Jubilant" src="./images/jubl_logo.png">
             </a>
           </div>
 
@@ -68,15 +69,15 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="images/slide1.jpg" alt="" style="width:100%;">
+                <img src="./images/slide1.jpg" alt="" style="width:100%;">
                 <div class="testimonials">
                   <div class="testimonial_1">
-                    <img src="images/raju.jpg" alt="Raju" class="img-responsive testi_slide_1">
+                    <img src="./images/raju.jpg" alt="Raju" class="img-responsive testi_slide_1">
                     <h3 class="name_1">Dr. Raju Sunil Mistry, Chief Human Resources Officer</h3>
                     <p class="said_1">"Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives."</p>
                   </div>
                   <div class="testimonial_2">
-                    <img src="images/steve.jpg" alt="Steve" class="img-responsive testi_slide_2">
+                    <img src="./images/steve.jpg" alt="Steve" class="img-responsive testi_slide_2">
                     <h3 class="name_2">Steve Hutchins, President - Drug Discovery Solutions</h3>
                     <p class="said_2">"The internal work environment at Jubilant Life Sciences far exceeds any other corporation. Jubilant stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family."</p>
                   </div>
@@ -84,7 +85,7 @@
               </div>
 
               <div class="item">
-                <img src="images/slide3.jpg" alt="" style="width:100%;">
+                <img src="./images/slide3.jpg" alt="" style="width:100%;">
                 <div class="container slider-slide-2">
                   <div class="upper-write">
                     <h3>Discover and do what you love.</h3>
@@ -121,108 +122,95 @@
 <section id="section2description" style="display: none;">
   <div class="job">
     <video autoplay muted loop id="myVideo">
-      <source src="images/banner.mp4" type="video/mp4">
+      <source src="./images/banner.mp4" type="video/mp4">
     </video>
       <div style="padding: 2.5rem 0 4.5rem 0;">
-        <div style="width: 100%; padding-left: 20px; padding-right: 20px;">
+        <div class="jobBox">
           <div id="demo" class="jplist">
             <a id="scrollToJobMap3" href="javascript:void(0)"
             style="font-size: 22px; cursor: pointer;"> Go to map &nbsp;<i
             class="fa fa-angle-up"></i>
           </a>
-          <div class="jplist-panel panel-top" style="margin-top: 30px;">
-                <!--            <button type="button" style="background: transparent; color: #ffffff !important; text-shadow: 0px; text-shadow: none; padding: 8px; box-shadow: none; font-size: 12px; border: 1px solid #fff; border-radius: 30px;">
-f             Reset &nbsp;<i class="fa fa-share"></i>
-</button> -->
-<div class="jplist-drop-down"
-data-control-type="items-per-page-drop-down"
-data-control-name="paging" data-control-action="paging"
-style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
-
-<ul style="color: #000; width: 120px;">
-  <li><span data-number="3" data-default="true"> 3
-  per page </span></li>
-  <li><span data-number="5"> 5 per page </span></li>
-  <li><span data-number="10"> 10 per page </span></li>
-  <li><span data-number="all"> View All </span></li>
-</ul>
-</div>
-
-<div class="text-filter-box">
-  <i class="fa fa-search  jplist-icon"
-  style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"></i>
-                  <!--[if lt IE 10]>
-                  <div class="jplist-label">Filter by Title:</div>
-                <![endif]-->
-                <input data-path=".title" type="text" value=""
-                placeholder="Filter by Job Title" data-control-type="textbox"
-                data-control-name="title-filter" data-control-action="filter"
-                style="width: 170px; font-size: 14px; padding: 0 5px; border: 1px solid #cccccc; text-indent: 0; border-bottom-right-radius: 15px; border-top-right-radius: 15px;" />
+          <div class="jplist-panel panel-top" style="">
+              <div class="jplist-drop-down" data-control-type="items-per-page-drop-down"
+              data-control-name="paging" data-control-action="paging">
+                <ul style="color: #000; width: 100%;">
+                  <li><span data-number="3" data-default="true"> 3
+                  per page </span></li>
+                  <li><span data-number="5"> 5 per page </span></li>
+                  <li><span data-number="10"> 10 per page </span></li>
+                  <li><span data-number="all"> View All </span></li>
+                </ul>
               </div>
 
               <div class="text-filter-box">
                 <i class="fa fa-search  jplist-icon"
-                style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"></i>
+                style="border-bottom-left-radius: 15px; border-top-left-radius: 15px; line-height: 28px;"></i>
+                  <!--[if lt IE 10]>
+                  <div class="jplist-label">Filter by Title:</div>
+                <![endif]-->
+                <input data-path=".title" type="text" value=""
+                placeholder="Filter Job Title" data-control-type="textbox"
+                data-control-name="title-filter" data-control-action="filter" />
+              </div>
+
+              <div class="text-filter-box">
+                <i class="fa fa-search  jplist-icon"
+                style="border-bottom-left-radius: 15px; border-top-left-radius: 15px; line-height: 28px;"></i>
                   <!--[if lt IE 10]>
                   <div class="jplist-label">Filter by Description:</div>
                 <![endif]-->
                 <input data-path=".desc" type="text" value=""
-                placeholder="Filter by Job-Description"
-                data-control-type="textbox" data-control-name="desc-filter"
-                data-control-action="filter"
-                style="width: 170px; font-size: 14px; padding: 0 5px; border: 1px solid #cccccc; text-indent: 0; border-bottom-right-radius: 15px; border-top-right-radius: 15px;" />
+                placeholder="Filter Job Description" data-control-type="textbox" data-control-name="desc-filter" data-control-action="filter" />
+              </div>
+
+              <div class="jplist-drop-down"
+                data-control-type="filter-drop-down"
+                data-control-name="location-filter"
+                data-control-action="filter">
+                <ul id="locationUL" style="color: #000; width: 100%;">
+                  <li><span data-path="default">Filter by Location</span></li>
+                  <li><span data-path=".Banglore">Banglore</span></li>
+                  <li><span data-path=".Mumbai">Mumbai</span></li>
+                  <li><span data-path=".Nira">Nira</span></li>
+                  <li><span data-path=".Noida">Noida</span></li>
+                </ul>
+              </div>
+
+
+              <div class="jplist-drop-down"
+              data-control-type="filter-drop-down"
+              data-control-name="function-filter"
+              data-control-action="filter">
+                <ul id="functionUL" style="color: #000; width: 100%;">
+                  <li><span data-path="default">Filter by Function</span></li>
+                  <li><span data-path=".Administration">Administration</span></li>
+                  <li><span data-path=".Finance_n_Accounts">Finance
+                  &amp; Accounts</span></li>
+                  <li><span data-path=".Human_Resources">Human
+                  Resources</span></li>
+                  <li><span data-path=".Engineering">Engineering</span></li>
+                  <li><span data-path=".Legal">Legal</span></li>
+                  <li><span data-path=".Supply_Chain">Supply Chain</span></li>
+                </ul>
               </div>
 
               <div class="jplist-drop-down"
               data-control-type="filter-drop-down"
-              data-control-name="location-filter"
-              data-control-action="filter"
-              style="width: 200px; border-radius: 30px; font-weight: bold; font-size: 14px;">
-              <ul id="locationUL" style="color: #000; width: 180px;">
-                <li><span data-path="default">Filter by Location</span></li>
-                <li><span data-path=".Banglore">Banglore</span></li>
-                <li><span data-path=".Mumbai">Mumbai</span></li>
-                <li><span data-path=".Nira">Nira</span></li>
-                <li><span data-path=".Noida">Noida</span></li>
-              </ul>
-            </div>
+              data-control-name="business-filter"
+              data-control-action="filter">
+                <ul id="businessUL" style="color: #000; width: 100;">
+                  <li><span data-path="default">Filter by Business</span></li>
+                  <li><span data-path=".Allergy">Allergy</span></li>
+                  <li><span data-path=".Corporate">Corporate</span></li>
+                  <li><span data-path=".Drug_Discovery">Drug
+                  Discovery</span></li>
+                  <li><span data-path=".Generics">Generics</span></li>
+                </ul>
+              </div>
 
-
-            <div class="jplist-drop-down"
-            data-control-type="filter-drop-down"
-            data-control-name="function-filter"
-            data-control-action="filter"
-            style="width: 200px; border-radius: 30px; font-weight: bold; font-size: 14px;">
-            <ul id="functionUL" style="color: #000; width: 300px;">
-              <li><span data-path="default">Filter by Function</span></li>
-              <li><span data-path=".Administration">Administration</span></li>
-              <li><span data-path=".Finance_n_Accounts">Finance
-              & Accounts</span></li>
-              <li><span data-path=".Human_Resources">Human
-              Resources</span></li>
-              <li><span data-path=".Engineering">Engineering</span></li>
-              <li><span data-path=".Legal">Legal</span></li>
-              <li><span data-path=".Supply_Chain">Supply Chain</span></li>
-            </ul>
+            <div class="jplist-pagination" data-control-type="pagination" data-control-name="paging" data-control-action="paging"></div>
           </div>
-
-          <div class="jplist-drop-down"
-          data-control-type="filter-drop-down"
-          data-control-name="business-filter"
-          data-control-action="filter"
-          style="width: 200px; border-radius: 30px; font-weight: bold; font-size: 14px;">
-          <ul id="businessUL" style="color: #000; width: 180px;">
-            <li><span data-path="default">Filter by Business</span></li>
-            <li><span data-path=".Allergy">Allergy</span></li>
-            <li><span data-path=".Corporate">Corporate</span></li>
-            <li><span data-path=".Drug_Discovery">Drug
-            Discovery</span></li>
-            <li><span data-path=".Generics">Generics</span></li>
-          </ul>
-        </div>
-        <div class="jplist-pagination" data-control-type="pagination"
-        data-control-name="paging" data-control-action="paging"></div>
-      </div>
 
       <!-- data -->
       <div class="text-shadow" style="padding-top: 20px;">
@@ -327,10 +315,9 @@ style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
             <div class="jplist-drop-down"
             data-control-type="items-per-page-drop-down"
             data-control-name="paging" data-control-action="paging"
-            data-control-animate-to-top="true"
-            style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
+            data-control-animate-to-top="true">
 
-            <ul style="color: #000; width: 120px;">
+            <ul style="color: #000; width: 100%;">
               <li><span data-number="3" data-default="true"> 3
               per page </span></li>
               <li><span data-number="5"> 5 per page </span></li>
@@ -338,6 +325,7 @@ style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
               <li><span data-number="all"> View All </span></li>
             </ul>
           </div>
+          <!-- panel end -->
 
           <!-- pagination results -->
           <div class="jplist-label" data-type="{start} - {end} of {all}"
@@ -371,7 +359,7 @@ style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
             <div class="content">
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #42b078;"></div>
-                <img class="content-image" src="images/1.jpg">
+                <img class="content-image" src="./images/1.jpg">
                 <div class="value-inner"><h2>Inspire <br><span>Confidence</span></h2><hr></div>
                 <div class="content-details fadeIn-right">
                   <p>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p>
@@ -383,7 +371,7 @@ style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
             <div class="content">
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #557494;"></div>
-                <img class="content-image" src="images/2.jpg">
+                <img class="content-image" src="./images/2.jpg">
                 <div class="value-inner"><h2>Always <br><span>Stretch</span></h2><hr></div>
                 <div class="content-details fadeIn-right">
                   <p>We stretch ourselves to be cost effective and efficient in all aspects of our operations and focus on flawless delivery to create and provide the best value to our stakeholders.</p>
@@ -395,7 +383,7 @@ style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
             <div class="content">
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #81841c;"></div>
-                <img class="content-image" src="images/3.jpg">
+                <img class="content-image" src="./images/3.jpg">
                 <div class="value-inner"><h2>Nurture <br><span>Innovation</span></h2><hr></div>
                 <div class="content-details fadeIn-right">
                   <p>By sharing our knowledge and learning from each other and from the markets we serve, we will continue to surprise our stakeholders with innovative solutions.</p>
@@ -407,7 +395,7 @@ style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
             <div class="content">
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #4a266b;"></div>
-                <img class="content-image" src="images/4.jpg">
+                <img class="content-image" src="./images/4.jpg">
                 <div class="value-inner"><h2>Excellent <br><span>Quality</span></h2><hr></div>
                 <div class="content-details fadeIn-right">
                   <p>With utmost care for the environment and safety, we will always strive to excel in the quality of our processes, our products and our services.</p>
@@ -610,7 +598,7 @@ style="width: 175px; border-radius: 30px; font-weight: bold; font-size: 14px;">
             <div class="col-md-4">
               <div class="row text-center sign-with">
                 <div class="col-md-12">
-                  <img src="images/jubl_logo.png">
+                  <img src="./images/jubl_logo.png">
                 </div>
               </div>
             </div>

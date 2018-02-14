@@ -91,7 +91,6 @@
 	border-radius: 3px;
 	text-shadow: 1px 1px 1px #fff;
 	color: #27252a;
-	width: 150px;
 	text-indent: 5px;
 	background: #fff
 }
@@ -185,12 +184,6 @@
 	margin: 10px 10px 0 0
 }
 
-@media only screen and (max-width:600px) {
-	.jplist-panel {
-		display: none
-	}
-}
-
 .jplist-drop-down {
 	float: left;
 	height: 30px;
@@ -204,7 +197,6 @@
 	border-radius: 3px;
 	text-shadow: 1px 1px 1px #fff;
 	color: #27252a;
-	width: 150px;
 	background: #fff;
 	background: -moz-linear-gradient(top, #fff 0, #efefef 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff),
@@ -213,7 +205,7 @@
 	background: -o-linear-gradient(top, #fff 0, #efefef 100%);
 	background: -ms-linear-gradient(top, #fff 0, #efefef 100%);
 	background: linear-gradient(to bottom, #fff 0, #efefef 100%);
-	margin: 10px 10px 0 0;
+	margin: 10px 0 0 0;
 	position: relative
 }
 
@@ -263,7 +255,8 @@
 	height: 30px;
 	line-height: 30px;
 	text-indent: 10px;
-	cursor: pointer
+	cursor: pointer;
+	font-weight: normal;
 }
 
 .jplist-drop-down ul li:hover {

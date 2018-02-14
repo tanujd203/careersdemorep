@@ -200,6 +200,15 @@
 	padding: 15px
 }
 
+@media only screen and (max-width: 767px) {
+	.demo-tbl {
+		margin-top: 0;
+	}
+	.demo-tbl td, .demo-tbl th {
+		padding: 5px
+	}
+}
+
 .demo-tbl p {
 	margin: 0;
 	padding: 0 15px 5px 0
@@ -211,4 +220,89 @@
 
 .demo-tbl .even {
 	background: #f9f9f9;
+}
+
+.jobBox {
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+	.jobBox {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+.jplist-panel .panel-top {
+	margin-top: 30px;
+	width: 100%;
+	height: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.jplist-panel {
+		padding-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.jplist-panel {
+		padding-bottom: 20px;
+	}
+}
+
+.jplist-drop-down {
+	width: 16.66%;
+	border-radius: 30px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.text-filter-box {
+	width: 16.66%;	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.jplist-drop-down {
+		width: 33.33%;
+	}
+
+	.text-filter-box {
+		width: 33.33%;	
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+	.jplist-drop-down {
+		width: 50%;
+	}
+
+	.text-filter-box {
+		width: 50%;	
+	}
+}
+
+.jplist-panel input[type="text"] {
+	width: 155px;
+	font-size: 14px;
+	padding: 0 5px;
+	border: 1px solid #cccccc;
+	text-indent: 0;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.jplist-panel input[type="text"] {
+		width: 125px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.jplist-panel input[type="text"] {
+		width: 140px;
+	}
 }
