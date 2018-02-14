@@ -175,11 +175,12 @@ now override the 3.3 new styles for modern browsers & apply opacity
     }
 }
 
-/*@media only screen and (max-width: 767px) {
-	.item {
-		height: 100px;
+@media only screen and (max-width: 767px) {
+	.slider-background {
+		width: 100%;
+		min-height: 250px;
 	}
-}*/
+}
 
 .testi_slide_1 {
 	position: absolute;
@@ -301,18 +302,18 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 @media only screen and (max-width : 767px) {
 	.said_1 {
-		top: 31%;
+		top: 23%;
 		left: 14%;
 		width: 80%;
-		font-size: 8px;
+		font-size: 10px;
 		text-align: center;
 	}
 
 	.said_2 {
-		top: 71%;
+		top: 63%;
 		left: 14%;
 		width: 80%;
-		font-size: 8px;
+		font-size: 10px;
 		text-align: center;
 	}
 }
@@ -335,6 +336,16 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	}
 }
 
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+	.said_1 {
+		width: 65%;
+	}
+
+	.said_2 {
+		width: 65%;
+	}
+}
+
 .container.slider-slide-2 {
     position: absolute;
     bottom: 160px;
@@ -354,7 +365,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 @media only screen and (max-width : 767px) {
 	.container.slider-slide-2 {
-		bottom: 10px;
+		bottom: 20%;
 	}
 }
 
@@ -474,7 +485,8 @@ height: 300px;
 }
 
 .value-inner p {
-	text-align: justify;
+	text-align: left;
+	font-size: 12px;
 }
 
 
@@ -583,10 +595,7 @@ height: 300px;
 
 @media only screen and (max-width : 767px) {
 	.content-details p{
-		font-size: 8px;
-		padding-top: 30%;
-		padding-left: 1em;
-  		padding-right: 1em;
+		display: none;
 	}
 }
 
@@ -1379,7 +1388,7 @@ div#OR {
 }
 
 #section2description .job {
-	height: 500px;
+	height: 100%;
 }
 
 .job #myVideo {

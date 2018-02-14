@@ -29,7 +29,7 @@
 }
 
 .jplist-panel {
-	color: #27252a
+	color: #27252a;
 }
 
 .jplist-panel button {
@@ -88,7 +88,7 @@
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
 	border: 1px solid #dbdbdb;
-	border-radius: 3px;
+	border-top-right-radius: 15px;
 	text-shadow: 1px 1px 1px #fff;
 	color: #27252a;
 	text-indent: 5px;
@@ -194,7 +194,7 @@
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
 	border: 1px solid #dbdbdb;
-	border-radius: 3px;
+	border-radius: 15px;
 	text-shadow: 1px 1px 1px #fff;
 	color: #27252a;
 	background: #fff;
@@ -205,7 +205,7 @@
 	background: -o-linear-gradient(top, #fff 0, #efefef 100%);
 	background: -ms-linear-gradient(top, #fff 0, #efefef 100%);
 	background: linear-gradient(to bottom, #fff 0, #efefef 100%);
-	margin: 10px 0 0 0;
+	margin: 10px 1.66% 0 0;
 	position: relative
 }
 
@@ -239,7 +239,7 @@
 	position: relative;
 	top: 0;
 	z-index: 1000;
-	width: 148px;
+	width: 100%;
 	display: none;
 	overflow: hidden;
 	background: #fff;

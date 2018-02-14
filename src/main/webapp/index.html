@@ -69,7 +69,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="./images/slide1.jpg" alt="" style="width:100%;">
+                <img src="./images/slide1.jpg" alt="" style="width: 100%" class="slider-background">
                 <div class="testimonials">
                   <div class="testimonial_1">
                     <img src="./images/raju.jpg" alt="Raju" class="img-responsive testi_slide_1">
@@ -85,7 +85,7 @@
               </div>
 
               <div class="item">
-                <img src="./images/slide3.jpg" alt="" style="width:100%;">
+                <img src="./images/slide3.jpg" alt="" style="width: 100%" class="slider-background">
                 <div class="container slider-slide-2">
                   <div class="upper-write">
                     <h3>Discover and do what you love.</h3>
@@ -360,7 +360,9 @@
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #42b078;"></div>
                 <img class="content-image" src="./images/1.jpg">
-                <div class="value-inner"><h2>Inspire <br><span>Confidence</span></h2><hr></div>
+                <div class="value-inner"><h2>Inspire <br><span>Confidence</span></h2><hr>
+                  <div class="visible-xs"><p>--------------------<br>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p></div>
+                </div>
                 <div class="content-details fadeIn-right">
                   <p>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p>
                 </div>
@@ -372,7 +374,9 @@
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #557494;"></div>
                 <img class="content-image" src="./images/2.jpg">
-                <div class="value-inner"><h2>Always <br><span>Stretch</span></h2><hr></div>
+                <div class="value-inner"><h2>Always <br><span>Stretch</span></h2><hr>
+                  <div class="visible-xs"><p>--------------------<br>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p></div>
+                </div>
                 <div class="content-details fadeIn-right">
                   <p>We stretch ourselves to be cost effective and efficient in all aspects of our operations and focus on flawless delivery to create and provide the best value to our stakeholders.</p>
                 </div>
@@ -384,7 +388,9 @@
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #81841c;"></div>
                 <img class="content-image" src="./images/3.jpg">
-                <div class="value-inner"><h2>Nurture <br><span>Innovation</span></h2><hr></div>
+                <div class="value-inner"><h2>Nurture <br><span>Innovation</span></h2><hr>
+                  <div class="visible-xs"><p>--------------------<br>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p></div>
+                </div>
                 <div class="content-details fadeIn-right">
                   <p>By sharing our knowledge and learning from each other and from the markets we serve, we will continue to surprise our stakeholders with innovative solutions.</p>
                 </div>
@@ -396,7 +402,9 @@
               <a href="#" target="_blank">
                 <div class="content-overlay" style="background-color: #4a266b;"></div>
                 <img class="content-image" src="./images/4.jpg">
-                <div class="value-inner"><h2>Excellent <br><span>Quality</span></h2><hr></div>
+                <div class="value-inner"><h2>Excellent <br><span>Quality</span></h2><hr>
+                  <div class="visible-xs"><p>--------------------<br>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p></div>
+                </div>
                 <div class="content-details fadeIn-right">
                   <p>With utmost care for the environment and safety, we will always strive to excel in the quality of our processes, our products and our services.</p>
                 </div>
@@ -504,7 +512,7 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+            <div class="col-md-12" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
               <!-- Nav tabs -->
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
@@ -525,7 +533,7 @@
                       <label for="exampleInputPassword1" class="col-sm-2 control-label">
                       Password</label>
                       <div class="col-sm-10">
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" />
+                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password" />
                       </div>
                     </div>
                     <div class="row">
@@ -542,42 +550,30 @@
                 <div class="tab-pane" id="Registration">
                   <form role="form" class="form-horizontal">
                     <div class="form-group">
-                      <label for="email" class="col-sm-2 control-label">
-                      Name</label>
-                      <div class="col-sm-10">
-                        <div class="row">
-                          <div class="col-md-3">
-                            <select class="form-control">
-                              <option>Mr.</option>
-                              <option>Ms.</option>
-                              <option>Mrs.</option>
-                              <option>Dr.</option>
-                            </select>
-                          </div>
-                          <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Name" />
-                          </div>
-                        </div>
+                      <label for="name" class="col-sm-3 control-label">
+                      First Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="First Name" />
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="email" class="col-sm-2 control-label">
+                      <label for="name" class="col-sm-3 control-label">
+                      Last Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Last Name" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="col-sm-3 control-label">
                       Email</label>
-                      <div class="col-sm-10">
+                      <div class="col-sm-9">
                         <input type="email" class="form-control" id="email" placeholder="Email" />
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="mobile" class="col-sm-2 control-label">
-                      Mobile</label>
-                      <div class="col-sm-10">
-                        <input type="email" class="form-control" id="mobile" placeholder="Mobile" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="password" class="col-sm-2 control-label">
+                      <label for="password" class="col-sm-3 control-label">
                       Password</label>
-                      <div class="col-sm-10">
+                      <div class="col-sm-9">
                         <input type="password" class="form-control" id="password" placeholder="Password" />
                       </div>
                     </div>
@@ -592,13 +588,6 @@
                       </div>
                     </div>
                   </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="row text-center sign-with">
-                <div class="col-md-12">
-                  <img src="./images/jubl_logo.png">
                 </div>
               </div>
             </div>
