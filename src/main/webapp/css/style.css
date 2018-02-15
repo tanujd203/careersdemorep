@@ -175,6 +175,18 @@ now override the 3.3 new styles for modern browsers & apply opacity
     }
 }
 
+.carousel-control {
+	width: 5%;
+}
+
+.carousel-control.left {
+	background-image: none;
+}
+
+.carousel-control.right {
+	background-image: none;
+}
+
 @media only screen and (max-width: 767px) {
 	.slider-background {
 		width: 100%;
@@ -641,7 +653,7 @@ height: 300px;
 }
 
 #footer {
-	background-color: #2b2b2b;
+	background-color: #3e3e3e;
 	color: #ffffff;
 	padding: 3rem 0 0 0;
 }
@@ -740,6 +752,19 @@ height: 300px;
 		position: relative;
 		margin: 0 auto;
 		width: 160px;
+	}
+}
+
+.social-linkedin img {
+	width: 60%;
+	cursor: pointer;
+}
+
+@media only screen and (max-width : 991px){
+	.social-linkedin img {
+		width: 40%;
+		margin-left: 30%;
+		margin-top: 4%;
 	}
 }
 
@@ -948,7 +973,7 @@ height: 300px;
 		-webkit-transition: color 200ms;
 }
 .contact .envelope .paper a:hover {
-		color: #EEE;
+		color: #0D3B9C;
 }
 .contact .envelope .paper a.call:hover .i {
 		border-color: #DDD;
