@@ -563,20 +563,8 @@
                 </div>
                 <div class="tab-pane" id="Registration">
                   <form role="form" class="form-horizontal">
-                    <div class="form-group">
-                      <label for="name" class="col-sm-3 control-label">
-                      First Name</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" placeholder="First Name" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="name" class="col-sm-3 control-label">
-                      Last Name</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" placeholder="Last Name" />
-                      </div>
-                    </div>
+                   
+                    
                     <div class="form-group">
                       <label for="email" class="col-sm-3 control-label">
                       Email</label>
@@ -645,7 +633,7 @@
     </div>
   </div>
   <!-- End Login/Register Popup -->
-   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+   <button id="myBtn" title="Go to top"style="border:2px solid white;"><i class="fa fa-angle-double-up" ></i></button> 
 </main>
 
 <footer id="footer">
@@ -660,7 +648,7 @@
           <div class='icon social in'><i class='fa fa-linkedin'></i></div>
         </div> -->
         <div class="social-linkedin">
-          <a href="https://in.linkedin.com/company/jubilant-organosys-ltd"><img src="./images/linkedin-connect.png"></a>
+          <a href="https://in.linkedin.com/company/jubilant-organosys-ltd"><img src="./images/download.png" style="border-radius:7px"></a>
         </div>
       </div>
       <div class="col-md-2 col-xs-6 footer-list">
@@ -799,6 +787,11 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
         'click');
     });
 
-
+ $('#myBtn').click(function () {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 600);
+    return false;
+});
   </script>
   </html>
