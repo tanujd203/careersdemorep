@@ -299,6 +299,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	width: 50%;
 	font-size: 21px;
 	text-align: center;
+	visibility: hidden;
 }
 
 .said_2 {
@@ -310,6 +311,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	width: 50%;
 	font-size: 21px;
 	text-align: center;
+	visibility: hidden;
 }
 
 @media only screen and (max-width : 767px) {
@@ -1044,6 +1046,7 @@ li {
 }
 
 .contact-data {
+	visibility: hidden;
 	text-align: center;
 }
 
@@ -1466,19 +1469,20 @@ div#OR {
 	#myBtn {
 		bottom: 10px;
 		right: 10px;
-		width: 13%;
+		width: 12%;
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
 	#myBtn {
-		width: 6%;
+		width: 7%;
 	}
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px){
 	#myBtn {
-		width: 6%;
+		width: 10%;
+		font-size: 50px;
 	}
 }
 
