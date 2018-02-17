@@ -1456,9 +1456,30 @@ div#OR {
     background-color: #0D3B9C; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 20px; /* Some padding */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    padding: 1%; /* Some padding */
+    border-radius: 35px; /* Rounded corners */
+    font-size: 25px; /* Increase font size */
+    width: 5%;
+}
+
+@media screen and (max-width: 767px) {
+	#myBtn {
+		bottom: 10px;
+		right: 10px;
+		width: 14%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	#myBtn {
+		width: 6%;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	#myBtn {
+		width: 6%;
+	}
 }
 
 #myBtn:hover {
@@ -1466,3 +1487,11 @@ div#OR {
 }
 /* Return to top end */
 
+@media screen and (max-width: 767px) {
+	.carousel-indicators {
+		bottom: 0;
+	}
+	ol.carousel-indicators {
+		margin-bottom: 0;
+	}
+}
