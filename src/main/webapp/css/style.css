@@ -1457,7 +1457,7 @@ div#OR {
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 1%; /* Some padding */
-    border-radius: 35px; /* Rounded corners */
+    border-radius: 50%;; /* Rounded corners */
     font-size: 25px; /* Increase font size */
     width: 5%;
 }
@@ -1466,7 +1466,7 @@ div#OR {
 	#myBtn {
 		bottom: 10px;
 		right: 10px;
-		width: 14%;
+		width: 13%;
 	}
 }
 
