@@ -311,7 +311,6 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	width: 50%;
 	font-size: 21px;
 	text-align: center;
-	visibility: hidden;
 }
 
 @media only screen and (max-width : 767px) {

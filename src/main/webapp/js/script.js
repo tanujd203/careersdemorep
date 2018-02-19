@@ -1,4 +1,4 @@
-$('#myCarousel').carousel();
+$('#myCarousel').carousel({ pause: "false" });
 
 $(document).ready(function(){
 	$("#testimonial-slider").owlCarousel({
@@ -806,3 +806,5 @@ $('#myBtn').click(function () {
     }, 600);
     return false;
 });
+
+//$('.carousel').carousel({ pause: "false" });
