@@ -5,6 +5,7 @@
 @import
 	url("https://fonts.googleapis.com/css?family=Lato:300,400,700,300i,400i,700i")
 	;
+
 /*basic reset*/
 * {
 	margin: 0;
@@ -42,8 +43,22 @@ body {
 }
 
 /*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type){
-	display:none;
+#msform
+ 
+fieldset
+:not
+ 
+(
+:first-of-type
+ 
+){
+display
+:
+ 
+none
+;
+
+
 }
 
 /*inputs*/
@@ -142,7 +157,6 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-
 }
 
 #progressbar .li1:before {
@@ -153,9 +167,9 @@ body {
 	text-decoration: inherit;
 	width: 45px;
 	height: 45px;
-    line-height: 40px;
-    display: block;
-    font-size: 18px;
+	line-height: 40px;
+	display: block;
+	font-size: 18px;
 	color: #333;
 	background: white;
 	border-radius: 25px;
@@ -171,9 +185,9 @@ body {
 	text-decoration: inherit;
 	width: 45px;
 	height: 45px;
-    line-height: 40px;
-    display: block;
-    font-size: 18px;
+	line-height: 40px;
+	display: block;
+	font-size: 18px;
 	color: #333;
 	background: white;
 	border-radius: 25px;
@@ -189,9 +203,9 @@ body {
 	text-decoration: inherit;
 	width: 45px;
 	height: 45px;
-    line-height: 40px;
-    display: block;
-    font-size: 18px;
+	line-height: 40px;
+	display: block;
+	font-size: 18px;
 	color: #333;
 	background: white;
 	border-radius: 25px;
@@ -207,9 +221,9 @@ body {
 	text-decoration: inherit;
 	width: 45px;
 	height: 45px;
-    line-height: 40px;
-    display: block;
-    font-size: 18px;
+	line-height: 40px;
+	display: block;
+	font-size: 18px;
 	color: #333;
 	background: white;
 	border-radius: 25px;
@@ -225,9 +239,9 @@ body {
 	text-decoration: inherit;
 	width: 45px;
 	height: 45px;
-    line-height: 40px;
-    display: block;
-    font-size: 18px;
+	line-height: 40px;
+	display: block;
+	font-size: 18px;
 	color: #333;
 	background: white;
 	border-radius: 25px;
@@ -243,9 +257,9 @@ body {
 	text-decoration: inherit;
 	width: 45px;
 	height: 45px;
-    line-height: 40px;
-    display: block;
-    font-size: 18px;
+	line-height: 40px;
+	display: block;
+	font-size: 18px;
 	color: #333;
 	background: white;
 	border-radius: 25px;
@@ -330,7 +344,8 @@ body {
 	font-weight: bold;
 	color: white;
 	border: 0 none;
-	border-radius: 25px; cursor: pointer;
+	border-radius: 25px;
+	cursor: pointer;
 	padding: 10px 5px;
 	margin-top: 12px;
 	margin-bottom: 12px;
@@ -352,38 +367,31 @@ body {
 
 @media screen and (max-width: 767px) {
 	#progressbar .li1, #progressbar .li2, #progressbar .li3, #progressbar .li4,
-	#progressbar .li5, #progressbar .li6 {
+		#progressbar .li5, #progressbar .li6 {
 		font-size: 10px;
 	}
-
 	#msform fieldset {
-	    padding: 5px 20px;
-	    width: 100%;
-	    margin: 0 0;
+		padding: 5px 20px;
+		width: 100%;
+		margin: 0 0;
 	}
-
 	#progressbar {
 		margin-bottom: 0;
 	}
-
 	.fs-title {
 		margin-bottom: 0;
 	}
-
 	.bottom-1 {
 		width: 40%;
 	}
-
 	.bottom-2 {
 		width: 40%;
 	}
-
 	#msform input, #msform textarea {
 		padding: 10px;
 		height: 35px;
 		margin-bottom: 15px;
 	}
-
 	.form-control {
 		margin-bottom: 15px;
 	}
@@ -408,8 +416,8 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-	#progressbar .li1, #progressbar .li2, #progressbar .li3, #progressbar .li4, 
-	#progressbar .li5, #progressbar .li6 {
+	#progressbar .li1, #progressbar .li2, #progressbar .li3, #progressbar .li4,
+		#progressbar .li5, #progressbar .li6 {
 		font-weight: bolder;
 		text-shadow: 1px 1px black;
 		font-size: larger;
