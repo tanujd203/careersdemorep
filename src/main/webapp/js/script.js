@@ -188,38 +188,7 @@ $(function() {
 										"stroke-width" : 2
 									}
 								}
-							},
-							afterInit : function($self, paper, areas, plots,
-									options) {
-
-								paper.rect(190, 130, 0.2, 170).attr({
-									stroke : "#fff",
-									"stroke-width" : 1
-								});
-								var t = paper.text(190, 310, "USA", paper
-										.getFont("inherit", 500), 30);
-								t.attr({
-									fill : "#fff"
-								});
-								paper.rect(160, 70, 0.2, 170).attr({
-									stroke : "#fff",
-									"stroke-width" : 1
-								});
-								var t1 = paper.text(160, 250, "Canada", paper
-										.getFont("inherit", 500), 30);
-								t1.attr({
-									fill : "#fff"
-								});
-								paper.rect(690, 160, 0.2, 170).attr({
-									stroke : "#fff",
-									"stroke-width" : 1
-								});
-								var t2 = paper.text(690, 340, "India", paper
-										.getFont("inherit", 500), 30);
-								t2.attr({
-									fill : "#fff"
-								});
-							},
+							}
 						},
 						// Customize some areas of the map
 						areas : {
@@ -278,6 +247,9 @@ $(function() {
 								attrsHover : {
 									fill : "#000000"
 								},
+								tooltip : {
+									content : "<span style=\"font-weight:bold;\">India</span><br />"
+								}
 
 							},
 							"CA" : {
@@ -330,6 +302,9 @@ $(function() {
 								},
 								attrsHover : {
 									fill : "#000000"
+								},
+								tooltip : {
+									content : "<span style=\"font-weight:bold;\">Canada</span><br />"
 								}
 							},
 							"US" : {
@@ -383,6 +358,9 @@ $(function() {
 								},
 								attrsHover : {
 									fill : "#000000"
+								},
+								tooltip : {
+									content : "<span style=\"font-weight:bold;\">USA</span><br />"
 								}
 							}
 						},
