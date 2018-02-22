@@ -3,6 +3,10 @@
 	;
 
 @import
+	url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700')
+	;
+
+@import
 	url("https://fonts.googleapis.com/css?family=Lato:300,400,700,300i,400i,700i")
 	;
 /*basic reset*/
@@ -24,19 +28,9 @@ body {
 }
 
 .navbar-default {
+    background-color: #ffffff;
     margin-bottom: 0;
-    border-color: transparent;
-	width: 100%;
-	transition: background 350ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
-	z-index: 300;
-	background: transparent none repeat scroll 0% 0%;
-}
-
-.navbar-default.scrolled {
-	background-color: #ffffffe6;
-	border-radius: 0;
-/*	height: 50px;*/
-	transition: background 350ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    border-color: #ffffff;
 }
 
 .navbar-brand {
@@ -50,22 +44,12 @@ body {
     width: auto;
 }
 
-/*.scrolled.navbar-default .navbar-brand > img {
-    height: 60%;
-    padding: 0 0 0 25px;
-}*/
-
 .navbar-default .nav > li > a {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 1.2em;
 	font-weight: lighter;
 }
-
-/*.scrolled.navbar-default .nav > li > a {
-    padding-top: 14px;
-    padding-bottom: 21px;
-}*/
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
 	.navbar-default .nav > li > a {
@@ -98,29 +82,16 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #ffffff;
-}
-
-.scrolled.navbar-default .navbar-nav > li > a {
-	color: #000000;
+	color: #3b3b3b;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
 	color: #23b1ec;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-	background-color: transparent;
-	color: #8CCE32;
-	font-weight: 600;
+.navbar-default .navbar-nav > .active > a {
+	//background-color: #3AC6F6;
 }
-
-.scrolled.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-	background-color: transparent;
-	color: #8CCE32;
-	font-weight: 600;
-}
-
 
 .navbar-toggle {
     padding: 10px;
@@ -150,6 +121,104 @@ body {
 .navbar-btn {
 	padding: 16px 16px;
 	background: radial-gradient(#ffffff 5%, #23b1ec 65%, #80bb2d 10%);
+}
+
+.editCarousel {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+.carousel-control {
+	width: 5%;
+}
+
+.carousel-control.left {
+	background-image: none;
+}
+
+.carousel-control.right {
+	background-image: none;
+}
+
+@media only screen and (max-width: 767px) {
+	.slider-background {
+		width: 100%;
+		min-height: 250px;
+	}
+}
+
+.container.slider-slide-2 {
+    position: absolute;
+    bottom: 160px;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+	.container.slider-slide-2 {
+	    bottom: 80px;
+	}
+}
+
+@media only screen and (max-width : 991px) and (min-width: 768px) {
+	.container.slider-slide-2 {
+		bottom: 60px;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.container.slider-slide-2 {
+		bottom: 20%;
+	}
 }
 
 .banner {
@@ -727,7 +796,6 @@ a.major {
 .footer-list ul li a {
 	line-height: 30px;
 	color: #ffffff;
-	font-size: larger;
 }
 
 .footer-list ul,
@@ -785,8 +853,10 @@ li {
 .demo{
 	background: #39CBF6;
 	background: linear-gradient(#39CBF6, #0D3B9C);
-	padding-bottom: 30px;
+	/*padding-bottom: 30px;*/
+	min-height: 100%;
 }
+
 .testimonial{
     background: #fff;
     text-align: center;
@@ -855,7 +925,7 @@ li {
     color: #ffd9b8;
 }
 .owl-theme .owl-controls{
-    margin-top: 0;
+    margin-top: 4%;
 }
 .owl-theme .owl-controls .owl-page span{
     width: 32px;
@@ -1215,89 +1285,21 @@ div#OR {
 	}
 }
 
-.main {
-	position: relative;
-	overflow: hidden;
+.slide-caption .caption-content h2 {
+	font-size: 300%;
+	text-shadow: 1px 1px 6px #000000;
+	font-family: 'Oswald';
 }
 
-.test > video {
-	min-width: 100%;
-	object-fit: fill;
+.slide-caption .caption-content p {
+	font-size: 250%;
+	text-shadow: 1px 1px 6px #000000;
+	font-family: 'Oswald';
 }
 
-@media screen and (max-width: 767px) {
-	.test > video {
-		width: 200%;
-	}
-}
-
-.said {
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	z-index: 1;
-}
-
-.said h1 {
-	margin-bottom: 3.75rem;
-	font-size: 5.5rem;
-	color: rgb(255, 255, 255);
-	font-family: "NetflixSans", Gotham, “Helvetica\ Neue”, Helvetica, Arial, sans-serif;
-	line-height: 1.32;
-	font-weight: 600;
-	text-shadow: rgba(0, 0, 0, 0.2) 0px 5px 8px;
-	margin-top: 25rem;
-}
-
-@media screen and (max-width: 767px) {
-	.said h1 {
-		font-size: 3.5rem;
-		margin-top: 15rem;
-	}
-}
-
-#section1-arrow {
-	height: 49px;
-	width: 33px;
-	position: relative;
-	display: inline-block;
-	top: 0;
-	margin: 0px auto;
-	margin-top: 0px;
-	background-image: url("../images/arrow.png");
-	background-size: cover;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
-	-o-background-size: cover;
-	cursor: pointer;
-}
-
-.on-head {
-	position: absolute;
-
-background: rgba(112,112,112,1);
-background: -moz-linear-gradient(top, rgba(112,112,112,1) 0%, rgba(130,130,130,1) 0%, rgba(56,56,56,1) 0%, rgba(92,92,92,1) 0%, rgba(97,97,97,1) 0%, rgba(79,79,79,0.2) 25%, rgba(23,23,23,0.2) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(112,112,112,1)), color-stop(0%, rgba(130,130,130,1)), color-stop(0%, rgba(56,56,56,1)), color-stop(0%, rgba(92,92,92,1)), color-stop(0%, rgba(97,97,97,1)), color-stop(25%, rgba(79,79,79,0.2)), color-stop(100%, rgba(23,23,23,0.2)));
-background: -webkit-linear-gradient(top, rgba(112,112,112,1) 0%, rgba(130,130,130,1) 0%, rgba(56,56,56,1) 0%, rgba(92,92,92,1) 0%, rgba(97,97,97,1) 0%, rgba(79,79,79,0.2) 25%, rgba(23,23,23,0.2) 100%);
-background: -o-linear-gradient(top, rgba(112,112,112,1) 0%, rgba(130,130,130,1) 0%, rgba(56,56,56,1) 0%, rgba(92,92,92,1) 0%, rgba(97,97,97,1) 0%, rgba(79,79,79,0.2) 25%, rgba(23,23,23,0.2) 100%);
-background: -ms-linear-gradient(top, rgba(112,112,112,1) 0%, rgba(130,130,130,1) 0%, rgba(56,56,56,1) 0%, rgba(92,92,92,1) 0%, rgba(97,97,97,1) 0%, rgba(79,79,79,0.2) 25%, rgba(23,23,23,0.2) 100%);
-background: linear-gradient(to bottom, rgba(112,112,112,1) 0%, rgba(130,130,130,1) 0%, rgba(56,56,56,1) 0%, rgba(92,92,92,1) 0%, rgba(97,97,97,1) 0%, rgba(79,79,79,0.2) 25%, rgba(23,23,23,0.2) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#707070', endColorstr='#171717', GradientType=0 );
-
-top: 0px;
-min-width: 100%;
-height: 100%;
-}
-
-.section1 {
-	display: flex;
-	height: 100%;
-	position: relative;
-}
-
-.test {
-    width: 100%;
-    display: inline-flex;
+.slide-caption .caption-content a {
+	font-size: 140%;
+	font-family: 'Oswald';
 }
 
 /* Form message */
@@ -1311,6 +1313,6 @@ height: 100%;
 	color: #80bb2d;
 }
 
-/*.down-buttons {
-	text-align: center;
-}*/
+section {
+	height: 100vh;
+}
