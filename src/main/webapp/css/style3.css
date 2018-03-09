@@ -1313,6 +1313,6 @@ div#OR {
 	color: #80bb2d;
 }
 
-section {
+#section1, #section2 #section2description, #section3, #section4 {
 	height: 100vh;
 }
