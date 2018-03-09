@@ -1,21 +1,86 @@
 package restServices;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
-@Path("/portal")
+import org.w3c.dom.CharacterData;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+
+import java.io.StringReader;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.GET;
+import javax.ws.rs.Produces;
+
+@Path("/Portal")
 public class test {
 
 	@GET
 	@Path("/getData")
 	@Produces(MediaType.TEXT_HTML)
-	public String sayHtmlHello1() {
+	public String sayHtmlHello() {
 		return "<html> " + "<title>" + "Hello Jersey" + "</title>" + "<body><h1>" + "Hello Jersey" + "</body></h1>"
 				+ "</html> ";
+	}
+
+	@GET
+	@Path("/testXML")
+	@Produces(MediaType.TEXT_HTML)
+	public String sayXMLHello() {
+
+		String xmlRecords = "<data>" + " <employee>" + "   <name>ajay</name>" + "   <title>singh</title>"
+				+ "   <salary>10000</salary>" + " </employee>" + " <employee>" + "   <name>rahul</name>"
+				+ "   <title>singh</title>" + "   <salary>10000</salary>" + " </employee>" + " <employee>"
+				+ "   <name>ashok</name>" + "   <title>mehra</title>" + "   <salary>10000</salary>" + " </employee>"
+				+ " <employee>" + "   <name>abhay</name>" + "   <title>singh</title>" + "   <salary>10000</salary>"
+				+ " </employee>" + " <employee>" + "   <name>rajat</name>" + "   <title>kumar</title>"
+				+ "   <salary>10000</salary>" + " </employee>" + " <employee>" + "   <name>hari</name>"
+				+ "   <title>singh</title>" + "   <salary>10000</salary>" + " </employee>" + " <employee>"
+				+ "   <name>vikas</name>" + "   <title>singh</title>" + "   <salary>10000</salary>" + " </employee>"
+				+ "</data>";
+
+		try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			InputSource is = new InputSource();
+			is.setCharacterStream(new StringReader(xmlRecords));
+
+			Document doc = db.parse(is);
+			NodeList nodes = doc.getElementsByTagName("employee");
+
+			// iterate the employees
+			for (int i = 0; i < nodes.getLength(); i++) {
+				Element element = (Element) nodes.item(i);
+
+				NodeList name = element.getElementsByTagName("name");
+				Element line1 = (Element) name.item(0);
+				System.out.println("Name: " + getCharacterDataFromElement(line1));
+
+				NodeList title = element.getElementsByTagName("title");
+				Element line2 = (Element) title.item(0);
+				NodeList salary = element.getElementsByTagName("salary");
+				Element line3 = (Element) salary.item(0);
+				System.out.println("Title: " + getCharacterDataFromElement(line2));
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return xmlRecords;
+	}
+
+	public static String getCharacterDataFromElement(Element e) {
+		Node child = e.getFirstChild();
+		if (child instanceof CharacterData) {
+			CharacterData cd = (CharacterData) child;
+			return cd.getData();
+		}
+		return "?";
 	}
 
 }

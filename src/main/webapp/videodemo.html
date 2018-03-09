@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://previews.envatousercontent.com/files/229742203/video_carousel.html -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Bootstrap carousel bundle is a set of multi-purpose responsive sliders. It contains multiple items, thumbnails, thumbnail navigation, testimonial and much more ready to use examples of carousel.">
+<meta name="keywords"
+	content="bootstrap carousel, slider, responsive, multiple, items, columns, thumbnail, navigation, full screen, image gallery, fade effect, vertical slide, touch swipe, mobile friendly, touch enabled, jquery, css, html">
+<title>Video Demo</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link href="css/theme.min.css" rel="stylesheet" type="text/css">
+<link href="css/video.plugin.min.css" rel="stylesheet" type="text/css">
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+	rel="stylesheet" media="all">
+<style></style>
+</head>
+<body>
+	<div id="video_carousel"
+		class="carousel video_carousel_fade animate_text video_carousel_wrapper"
+		data-ride="carousel" data-interval="12000" data-pause="hover">
+		<div class="carousel-inner" role="listbox">
+			<div class="item">
+				<img src="images/carousel_video_img.png" alt="carousel video img">
+				<div class="carousel-caption video_carousel_caption">
+					<div class="video_carousel_header">&nbsp;Leadership
+						Speak&nbsp;</div>
+					<div class="video_carousel_caption_text">
+						<h1 data-animation="animated fadeInDown" class="">Dr. Raju
+							Sunil Mistry</h1>
+						<p data-animation="animated fadeInUp" class="">Chief Human
+							Resources Officer</p>
+					</div>
+					<div class="video_carousel_mute">
+						<button class="video_carousel_mute_button" id="mute_video_1">
+							<i id="mute_icon1" class="fa fa-volume-off"></i>
+						</button>
+					</div>
+					<video id="video_1" class=" video_carousel_video" muted autoplay  data-video="0">
+						<source src="images/crsl_video2.mp4" type="video/mp4">
+						Your browser does not support HTML5 video.
+					</video>
+				</div>
+			</div>
+			<div class="item active">
+				<img src="images/carousel_video_img.png" alt="carousel video img">
+				<div class="carousel-caption video_carousel_caption">
+					<!-- 					<div class="video_carousel_header">&nbsp;Leadership
+						Speak&nbsp;</div> -->
+					<div class="video_carousel_caption_text">
+						<h1 data-animation="animated fadeInDown"
+							class="animated fadeInDown">Steve Hutchins</h1>
+						<p data-animation="animated fadeInUp" class="animated fadeInUp">
+							President - Drug Discovery Solutions</p>
+					</div>
+					<div class="video_carousel_mute">
+						<button class="video_carousel_mute_button" id="mute_video_2">
+							<i id="mute_icon2" class="fa fa-volume-off"></i>
+						</button>
+					</div>
+					<video id="video_2" class="video_carousel_video" muted autoplay  data-video="1">
+						<source src="images/crsl_video1.mp4" type="video/mp4">
+						Your browser does not support HTML5 video.
+					</video>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control video_carousel_control_left"
+			href="https://previews.envatousercontent.com/files/229742203/video_carousel.html#video_carousel"
+			role="button" data-slide="prev"><span
+			class="fa fa-angle-left video_carousel_control_icons"
+			aria-hidden="true"></span><span class="sr-only">Previous</span></a><a
+			class="right carousel-control video_carousel_control_right"
+			href="https://previews.envatousercontent.com/files/229742203/video_carousel.html#video_carousel"
+			role="button" data-slide="next"><span
+			class="fa fa-angle-right video_carousel_control_icons"
+			aria-hidden="true"></span><span class="sr-only">Next</span></a>
+	</div>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+		charset="utf-8"></script>
+
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/video.plugin.min.js"></script>
+	<script>
+		$("#mute_video_1").click(function() {
+			if ($("#video_1").prop('muted')) {
+				$("#video_1").prop('muted', false);
+				$("#mute_icon1").toggleClass('fa-volume-off fa-volume-down');
+			} else {
+				$("#video_1").prop('muted', true);
+				$("#mute_icon1").toggleClass('fa-volume-down fa-volume-off');
+			}
+		});
+
+		$("#mute_video_2").click(function() {
+			if ($("#video_2").prop('muted')) {
+				$("#video_2").prop('muted', false);
+				$("#mute_icon2").toggleClass('fa-volume-off fa-volume-down');
+			} else {
+				$("#video_2").prop('muted', true);
+				$("#mute_icon2").toggleClass('fa-volume-down fa-volume-off');
+			}
+		});
+	</script>
+</body>
+</html>
