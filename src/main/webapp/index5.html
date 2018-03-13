@@ -261,7 +261,7 @@
 			<div style="padding: 2.5rem 0 4.5rem 0;">
 				<div class="jobBox">
 					<div id="demo" class="jplist">
-						<a class="scrollToJobMap" href="javascript:void(0)"
+						<a id="scrollToJobMap" href="javascript:void(0)"
 							style="font-size: 22px; font-weight: 100; border-bottom: 1px #ffffff dotted; cursor: pointer; text-decoration: none;">
 							Go to map &nbsp;<i class="fa fa-angle-up"></i>
 						</a>
@@ -270,10 +270,10 @@
 								data-control-type="items-per-page-drop-down"
 								data-control-name="paging" data-control-action="paging">
 								<ul style="color: #000; width: 100%;">
-									<li><span data-number="3" data-default="true"> 3
+									<!-- <li><span data-number="3"> 3 per page </span></li> -->
+									<li><span data-number="5" data-default="true"> 5
 											per page </span></li>
-									<li><span data-number="5"> 5 per page </span></li>
-									<li><span data-number="10"> 10 per page </span></li>
+									<!-- <li><span data-number="10"> 10 per page </span></li> -->
 									<li><span data-number="all"> View All </span></li>
 								</ul>
 							</div>
@@ -448,9 +448,9 @@
 						</div>
 
 						<!-- panel -->
-						<div class="jplist-panel panel-bottom">
+						<!-- 						<div class="jplist-panel panel-bottom">
 
-							<!-- items per page dropdown -->
+							items per page dropdown
 							<div class="jplist-drop-down"
 								data-control-type="items-per-page-drop-down"
 								data-control-name="paging" data-control-action="paging"
@@ -464,20 +464,20 @@
 									<li><span data-number="all"> View All </span></li>
 								</ul>
 							</div>
-							<!-- panel end -->
+							panel end
 
-							<!-- pagination results -->
+							pagination results
 							<div class="jplist-label" data-type="{start} - {end} of {all}"
 								data-control-type="pagination-info" data-control-name="paging"
 								data-control-action="paging"
 								style="font-size: 14px; font-weight: bold; border-radius: 30px;"></div>
 
-							<!-- pagination -->
+							pagination
 							<div class="jplist-pagination" data-control-type="pagination"
 								data-control-name="paging" data-control-action="paging"
 								data-control-animate-to-top="true"></div>
 
-						</div>
+						</div> -->
 					</div>
 					<!-- end of demo -->
 					<!-- 
@@ -777,8 +777,8 @@
 											<label for="exampleInputPassword1"
 												class="col-sm-3 control-label">Password</label>
 											<div class="col-sm-6">
-												<input type="password" class="form-control"
-													id="password1" placeholder="Password" />
+												<input type="password" class="form-control" id="password1"
+													placeholder="Password" />
 											</div>
 										</div>
 										<div class="row">
@@ -848,8 +848,8 @@
 											<label for="exampleInputPassword1"
 												class="col-sm-3 control-label"> Password</label>
 											<div class="col-sm-6">
-												<input type="password" class="form-control"
-													id="password3" placeholder="Password" />
+												<input type="password" class="form-control" id="password3"
+													placeholder="Password" />
 											</div>
 										</div>
 										<div class="row">

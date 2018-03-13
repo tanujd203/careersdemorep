@@ -11,13 +11,33 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import java.io.StringReader;
+import java.util.ArrayList;
+
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
+import javax.annotation.security.RolesAllowed;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
 
 @Path("/Portal")
 public class test {
+
+	@RolesAllowed("ADMIN")
+	@GET
+	@Path("/getEmpData")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Employees getAllEmployees() {
+		Employees list = new Employees();
+		list.setEmployeeList(new ArrayList<Employee>());
+
+		list.getEmployeeList().add(new Employee(1, "Lokesh Gupta"));
+		list.getEmployeeList().add(new Employee(2, "Alex Kolenchiskey"));
+		list.getEmployeeList().add(new Employee(3, "David Kameron"));
+
+		return list;
+	}
 
 	@GET
 	@Path("/getData")
