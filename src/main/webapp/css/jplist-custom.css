@@ -271,16 +271,15 @@
 }
 
 .text-filter-box {
-	width: 15%;	
+	width: 15%;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.jplist-drop-down {
 		width: 30%;
 	}
-
 	.text-filter-box {
-		width: 30%;	
+		width: 30%;
 	}
 }
 
@@ -288,9 +287,8 @@
 	.jplist-drop-down {
 		width: 33.33%;
 	}
-
 	.text-filter-box {
-		width: 33.33%;	
+		width: 33.33%;
 	}
 }
 
@@ -298,9 +296,8 @@
 	.jplist-drop-down {
 		width: 100%;
 	}
-
 	.text-filter-box {
-		width: 100%;	
+		width: 100%;
 	}
 }
 
