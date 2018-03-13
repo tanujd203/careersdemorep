@@ -1,0 +1,151 @@
+@import
+	url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css)
+	;
+
+@import
+	url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700')
+	;
+
+@import
+	url("https://fonts.googleapis.com/css?family=Lato:300,400,700,300i,400i,700i")
+	;
+/*basic reset*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	/* Chrome 10-25, Safari 5.1-6 */
+}
+
+body {
+	font-family: "Lato", Arial, Helvetica, sans-serif;
+	background: transparent;
+	overflow-x: hidden;
+	position: relative; 
+}
+
+.navbar-default {
+	position: relative;
+}
+
+.description-back {
+	padding-top: 60px;
+	background-image: url("../images/job-description1.jpg");
+		-moz-object-fit: cover;
+	-webkit-object-fit: cover;
+	-ms-object-fit: cover;
+	object-fit: cover;
+	-moz-object-position: center;
+	-webkit-object-position: center;
+	-ms-object-position: center;
+	object-position: center;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.title-inner {
+	text-align: center;
+	padding-top: 0px;
+	text-transform: uppercase;
+	font-family: 'Gotham-Book',Arial,Helvetica,sans-serif;
+	color: #ffffff;
+	padding-bottom: 4%;
+}
+
+.title-inner h1 {
+	text-shadow: 0px 1px 18px #666;
+	font-weight: 600;
+	text-shadow: 15px 1px 18px #548c7c;
+}
+
+.back-job {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.jobs-title {
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.job-summary {
+	margin: 20px 0;
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 20px;
+	font-size: 20px;
+}
+
+.jobs-location, .jobs-designation, .jobs-qualification, .jobs-skills, .jobs-experience, .jobs-positions {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+ .jobs-location .qualification,  .jobs-location .skills,  .jobs-designation .qualification,  .jobs-designation .skills,  .jobs-qualification .qualification,  .jobs-qualification .skills,  .jobs-skills .qualification,  .jobs-skills .skills,  .jobs-experience .qualification,  .jobs-experience .skills,  .jobs-positions .qualification,  .jobs-positions .skills {
+    margin-bottom: 15px;
+}
+
+.back-job {
+	background-color: #ffffff;
+    -webkit-box-shadow: 5px -3px 7px -4px rgba(168, 172, 184, 0.8), -5px -3px 7px -4px rgba(168, 172, 184, 0.8);
+    -moz-box-shadow: 5px -3px 7px -4px rgba(168, 172, 184, 0.8), -5px -3px 7px -4px rgba(168, 172, 184, 0.8);
+    box-shadow: 5px -3px 7px -4px rgba(168, 172, 184, 0.8), -5px -3px 7px -4px rgba(168, 172, 184, 0.8);
+}
+
+.back-job .container {
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+.jobs-link .btn {
+	margin: 3% 4% 0;
+    color: #ffffff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: white; 
+    color: black;
+}
+
+.button2 {
+    background-color: #23b1ec;
+    color: white;
+    border: 2px solid #23b1ec;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button3:hover {
+    background-color: white; 
+    color: black;
+}
+
+.button3 {
+    background-color: #80bb2d;
+    color: white;
+    border: 2px solid #80bb2d;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button4:hover {
+    background-color: white;
+    color: black;
+}
+
+.button4 {
+	background-color: #FDCC04;
+	color: #ffffff;
+    border: 2px solid #FDCC04;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
