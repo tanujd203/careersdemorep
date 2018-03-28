@@ -55,7 +55,8 @@ public class AuthenticationFilter implements javax.ws.rs.container.ContainerRequ
 
 			// If no authorization information present; block access
 			if (authorization == null || authorization.isEmpty()) {
-				requestContext.abortWith(ACCESS_DENIED);
+				//requestContext.abortWith(ACCESS_DENIED);
+				requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).entity("You cannot access this resource").build());
 				return;
 			}
 

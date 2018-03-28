@@ -11,10 +11,14 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import java.io.StringReader;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -39,6 +43,7 @@ public class test {
 		return list;
 	}
 
+	@PermitAll
 	@GET
 	@Path("/getData")
 	@Produces(MediaType.TEXT_HTML)
@@ -47,6 +52,22 @@ public class test {
 				+ "</html> ";
 	}
 
+	@PermitAll
+	@GET
+	@Path("/redirect")
+	@Produces(MediaType.TEXT_HTML)
+	public Response redirectExample() {
+		URI location = null;
+		try {
+			location = new URI("../index5.html");
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return Response.temporaryRedirect(location).build();
+	}
+
+	@PermitAll
 	@GET
 	@Path("/testXML")
 	@Produces(MediaType.TEXT_HTML)
